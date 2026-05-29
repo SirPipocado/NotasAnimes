@@ -108,6 +108,270 @@ button:hover { background: #2563eb; }
   font-size: 12px;
   z-index: 10;
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  background: #1e293b;
+  width: 90%;
+  max-width: 550px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  border: 2px solid #334155;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-content.brutal-border { border-color: #facc15; }
+.modal-content.dropado-border { border-color: #ff4d4d; }
+
+.modal-header {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.modal-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, #1e293b);
+}
+
+.btn-fechar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+}
+
+.btn-fechar:hover { 
+  background: rgba(255, 77, 77, 0.6); 
+}
+
+.modal-body {
+  padding: 25px;
+  color: #e5e7eb;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.modal-grid-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-review-title {
+  color: #facc15;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.modal-desc {
+  font-size: 14px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.info-popup-wrapper {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.info-btn {
+  width: 50px;
+  height: 50px;
+  background-color: #facc15;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.info-popout {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 280px;
+  background: #1e293b;
+  color: #e5e7eb;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #facc15;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  font-size: 14px;
+  line-height: 1.5;
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+}
+
+.info-popup-wrapper:hover .info-popout {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.info-popup-wrapper:hover .info-btn {
+  transform: scale(1.1);
+}
+
+.progress-container {
+  grid-column: span 2;
+  margin: 15px 0 25px 0;
+  position: relative;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: bold;
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 12px;
+  background: #334155;
+  border-radius: 6px;
+  overflow: visible;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: #3b82f6;
+  border-radius: 6px;
+  transition: width 0.5s ease-out;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+.progress-percentage-floating {
+  position: absolute;
+  top: 16px;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: #cbd5e1;
+  transition: left 0.5s ease-out;
+}
+
+.modal-content.brutal-border .progress-bar-fill {
+  background: #facc15;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.5);
+}
+.modal-content.brutal-border .progress-percentage-floating {
+  color: #facc15;
+}
+
+.modal-content.dropado-border .progress-bar-fill {
+  background: #ff4d4d;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.5);
+}
+.modal-content.dropado-border .progress-percentage-floating {
+  color: #ff4d4d;
+}
+
+.modal-genres-wrapper {
+  grid-column: span 2;
+  margin-bottom: 15px;
+}
+
+.modal-genres-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+}
+
+.modal-genres-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.genre-tag {
+  background: #334155;
+  color: #f8fafc;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #475569;
+}
+
 </style>
 </head>
 
@@ -141,7 +405,8 @@ const animes = [
     eps: "24/12",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BYmJhYjgzYTQtMzMxYi00NTkyLWI2MWItNTgxNjk1NzU0YmQzXkEyXkFqcGc@._V1_.jpg",
-    desc: "Bem legal, ele consegue colocar romance sem deixar meloso, só fofo, e tem várias piadas sexuais, mas dentro do limite."
+    desc: "Bem legal, ele consegue colocar romance sem deixar meloso, só fofo, e tem várias piadas sexuais, mas dentro do limite.",
+    genre: "1, 4, 9"
   },
   {
     nome: "Kimetsu no Yaiba",
@@ -153,7 +418,8 @@ const animes = [
     eps: "63/63", 
     filmes: "1/1",
     img: "https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Você pensa que é um vídeo da vida real até ver o Tanjiro."
+    desc: "Você pensa que é um vídeo da vida real até ver o Tanjiro.",
+    genre: "2, 7, 10"
   },
   {
     nome: "Dandadan",
@@ -165,7 +431,8 @@ const animes = [
     eps: "24/24", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BYWFhOWMxNTYtZThiMi00ZmQ5LTlmODktN2QwNzUyZjMyZGQzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Muita informação xD"
+    desc: "Muita informação xD",
+    genre: "1, 2, 4"
   },
   {
     nome: "Frieren: Beyond Journey's End",
@@ -177,7 +444,8 @@ const animes = [
     eps: "28/38", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZTI4ZGMxN2UtODlkYS00MTBjLWE1YzctYzc3NDViMGI0ZmJmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Ele consegue alternar entre tranquilidade e ação sem dificuldades, o universo é muito bem construído e pensado."
+    desc: "Ele consegue alternar entre tranquilidade e ação sem dificuldades, o universo é muito bem construído e pensado.",
+    genre: "6, 7, 9"
   },
   {
     nome: "Fullmetal Alchemist: Brotherhood",
@@ -189,7 +457,8 @@ const animes = [
     eps: "64/64", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMzNiODA5NjYtYWExZS00OTc4LTg3N2ItYWYwYTUyYmM5MWViXkEyXkFqcGc@._V1_QL75_UY281_CR6,0,190,281_.jpg",
-    desc: "Ele começa bem, o meio é ótimo, e o final é perfeito."
+    desc: "Ele começa bem, o meio é ótimo, e o final é perfeito.",
+    genre: "2, 7, 10"
   },
   {
     nome: "Fire Force",
@@ -201,7 +470,8 @@ const animes = [
     eps: "60/73", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMThhODExMTUtZmIyMC00OTY4LTk5YWMtN2YxYWRhNmNiNDNmXkEyXkFqcGc@._V1_.jpg",
-    desc: "Enrola muito e tem brigas que começam sem motivo e terminam sem um porquê, mas as lutas são bem bonitas é engraçado às vezes."
+    desc: "Enrola muito e tem brigas que começam sem motivo e terminam sem um porquê, mas as lutas são bem bonitas é engraçado às vezes.",
+    genre: "2, 8, 10"
   },
   {
     nome: "Assassination Classroom",
@@ -213,7 +483,8 @@ const animes = [
     eps: "47/47", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZjBkYmRiOTAtY2IwOS00ZWU3LTk3YjItNjMzYWZiMDE1MjcyXkEyXkFqcGc@._V1_.jpg",
-    desc: "Ideia legal, final legal, lore legal e Plots legais, pena que tem tantos episódios desnecessários que não dá vontade nenhuma de assistir."
+    desc: "Ideia legal, final legal, lore legal e Plots legais, pena que tem tantos episódios desnecessários que não dá vontade nenhuma de assistir.",
+    genre: "4, 8, 10"
   },
   {
     nome: "The Greatest Demon Lord Is Reborn as a Typical Nobody",
@@ -225,7 +496,8 @@ const animes = [
     eps: "12/12", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZTE0ZmQ0ZmYtYjllZS00MDg0LTk3YzMtYzBhMDk4ZjUzNzAyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Isekai/10 Não tem nada de especial, mas não é ruim."
+    desc: "Isekai/10 Não tem nada de especial, mas não é ruim.",
+    genre: "5, 7"
   },
   {
     nome: "Miss Kobayashi's Dragon Maid",
@@ -237,7 +509,8 @@ const animes = [
     eps: "03/26", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZTM2MmRjOTYtMTgwNS00NDUyLTk0Y2YtNTZkMjZkOTE0OTdlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "De maneira alguma é ruim, só não é meu estilo, Slice of Life não me pega tanto, mas é engraçado pelos episódios que assisti."
+    desc: "De maneira alguma é ruim, só não é meu estilo, Slice of Life não me pega tanto, mas é engraçado pelos episódios que assisti.",
+    genre: "4, 7, 9"
   },
   {
     nome: "A.I.C.O. Incarnation",
@@ -249,7 +522,8 @@ const animes = [
     eps: "12/12", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMTZiNGYzZjktODViMi00ZWJjLWExMTMtMGNkYzQ1ODVhNTE2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Não é ruim, mas não tem nada de especial, meio sem sal. Mas vale a pena assistir (Podia ter um final melhor)."
+    desc: "Não é ruim, mas não tem nada de especial, meio sem sal. Mas vale a pena assistir (Podia ter um final melhor).",
+    genre: "2, 8"
   },
   {
     nome: "Horimiya",
@@ -261,7 +535,8 @@ const animes = [
     eps: "13/26", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BNGFjM2M0MTYtM2IxMi00MWQ0LWIyNTYtMGE0YzAyMjA1N2ZhXkEyXkFqcGc@._V1_.jpg",
-    desc: "Eu não gosto de anime de romance, principalmente adolescente, e esse anime É SÓ ISSO, O ANIME INTEIRO."
+    desc: "Eu não gosto de anime de romance, principalmente adolescente, e esse anime É SÓ ISSO, O ANIME INTEIRO.",
+    genre: "1, 9"
   },
   {
     nome: "The Weakest Tamer Began a Journey to Pick Up Trash",
@@ -273,7 +548,8 @@ const animes = [
     eps: "12/12", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMGFiNzEwNTAtNGQ4Ni00YWZmLWFmNjEtNmZjOGNhMWFhYzgwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Um Isekai Be Like, porém acho que por conta da protagonista ser criança, você se apega mais a personagem e torce para tudo dar certo com ela."
+    desc: "Um Isekai Be Like, porém acho que por conta da protagonist ser criança, você se apega mais a personagem e torce para tudo dar certo com ela.",
+    genre: "5, 7, 9"
   },
   {
     nome: "KonoSuba: God's Blessing on This Wonderful World!",
@@ -285,7 +561,8 @@ const animes = [
     eps: "31/31", 
     filmes: "1/1",
     img: "https://m.media-amazon.com/images/M/MV5BNTQ5NzJjMjgtNDliNC00YTdmLWJiOTQtYWRiMzY4OWU5NGQ3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Melhor Isekai que já assisti, paródia de Isekai com Ecchi, BRUTAL."
+    desc: "Melhor Isekai que já assisti, paródia de Isekai com Ecchi, BRUTAL.",
+    genre: "3, 4, 5, 7"
   },
   {
     nome: "My Unique Skill Makes Me OP Even at Level 1",
@@ -297,7 +574,8 @@ const animes = [
     eps: "12/12", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BOTM4YWQzNGEtZTBiZi00NGIyLWE2NDQtMjcyYzM4NWFmN2Q2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Isekai/10 Eu Inhamo a Cenoura do Level Baixo."
+    desc: "Isekai/10 Eu Inhamo a Cenoura do Level Baixo.",
+    genre: "4, 5, 7"
   },
   {
     nome: "I Got a Cheat Skill in Another World and Became Unrivaled in The Real World, Too",
@@ -309,7 +587,8 @@ const animes = [
     eps: "13/13", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZWExYjA3OTAtYzliNC00MWMzLWI1NmYtYWY0MDRhNGIyN2IwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Isekai/10 Bem legal o estilo artístico trocando entre os mundos. A história é de isekai, não tem como fugir."
+    desc: "Isekai/10 Bem legal o estilo artístico trocando entre os mundos. A história é de isekai, não tem como fugir.",
+    genre: "2, 5, 7"
   },
   {
     nome: "That Time I Got Reincarnated as a Slime",
@@ -321,7 +600,8 @@ const animes = [
     eps: "72/72", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BOTczMjM3MDUtYmZjMC00YzZhLWE4ODQtNjg5YWU4NTJjNzY2XkEyXkFqcGc@._V1_.jpg",
-    desc: "Segundo melhor isekai que já assisti, muito interessante a ideia, único defeito é a falta de consequências, mas tirando isso, é muito bom!"
+    desc: "Segundo melhor isekai que já assisti, muito interessante a ideia, único defeito é a falta de consequências, mas tirando isso, é muito bom!",
+    genre: "2, 5, 7, 10"
   },
   {
     nome: "The Unwanted Undead Adventurer",
@@ -333,7 +613,8 @@ const animes = [
     eps: "12/12", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZTJlMzc5NTgtN2U3Ny00ZGE3LTlkMGQtYTA2ZTg1NThhZjIwXkEyXkFqcGc@._V1_.jpg",
-    desc: "Bom, tem uma ideia legal, pena que acaba muito cedo, com MUITAS pontas soltas e MUITAS coisas sem explicação."
+    desc: "Bom, tem uma ideia legal, pena que acaba muito cedo, com MUITAS pontas soltas e MUITAS coisas sem explicação.",
+    genre: "2, 7"
   },
   {
     nome: "Kaguya-sama: Love Is War",
@@ -345,7 +626,8 @@ const animes = [
     eps: "13/37", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMTM1ZWViNWMtZWY2ZC00YmYyLTk1ZGEtMzRjOWI2YTM1OTI3XkEyXkFqcGc@._V1_.jpg",
-    desc: "Muito bom o anime, a comédia é boa, mas ele mistura os dois gêneros que eu não gosto, Slice of Life e Romance, mas realmente um bom anime."
+    desc: "Muito bom o anime, a comédia é boa, mas ele mistura os dois gêneros que eu não gosto, Slice of Life e Romance, mas realmente um bom anime.",
+    genre: "1, 4, 9"
   },
   {
     nome: "Tomo-chan Is a Girl!",
@@ -357,7 +639,8 @@ const animes = [
     eps: "13/13", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMzQxMzg3N2EtN2MzNC00ZTg0LWJhNGYtZWU2Y2RlZTg1MGNlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "É engraçadinho, é romance mas não achei ruim, principalmente porque tem poucos episódios e um final aceitável."
+    desc: "É engraçadinho, é romance mas não achei ruim, principalmente porque tem poucos episódios e um final aceitável.",
+    genre: "1, 4, 9"
   },
   {
     nome: "Sword Art Online",
@@ -369,7 +652,8 @@ const animes = [
     eps: "12/96", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BN2NhYzU2NDEtYzI1NS00MjgzLThjZGUtOTYxNGJkZjZmNDdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Ideia boa, Isekai Be Like e as ações tem peso relativamente, porém tem um desequilíbrio nas lutas e cenas EXTREMAMENTE desconfortáveis."
+    desc: "Ideia boa, Isekai Be Like e as ações tem peso relativamente, porém tem um desequilíbrio nas lutas e cenas EXTREMAMENTE desconfortáveis.",
+    genre: "2, 5, 7, 8"
   },
   {
     nome: "Neon Genesis Evangelion",
@@ -381,7 +665,8 @@ const animes = [
     eps: "26/26", 
     filmes: "0/1",
     img: "https://m.media-amazon.com/images/M/MV5BZjZjZGI3ZDQtODNmZC00NjE0LTlmYTUtOTljMWI2YjNmMTQ0XkEyXkFqcGc@._V1_.jpg",
-    desc: "Superestimado, começa legal mas da metade pra frente escaralha tudo. É um anime que dá sono, principalmente nas partes finais onde não acontece nada, e eu não vou assistir vídeo pra entender a LORE."
+    desc: "Superestimado, começa legal mas da metade pra frente escaralha tudo. É um anime que dá sono, principalmente nas partes finais onde não acontece nada, e eu não vou assistir vídeo pra entender a LORE.",
+    genre: "6, 8"
   },
   {
     nome: "Dr. Stone",
@@ -393,7 +678,8 @@ const animes = [
     eps: "97/97", 
     filmes: "1/1",
     img: "https://m.media-amazon.com/images/M/MV5BYzZkYjM1MWMtNTY3Mi00MTMzLTlhNmQtN2ExZjFkYzdjZmFjXkEyXkFqcGc@._V1_.jpg",
-    desc: "Bom anime. A 1ª temporada é ótima nos processos, mas as próximas esculacham e tiram muita coisa c#. O nível segue bom, só sinto que a trama sai do trilho e perde um pouco da essência."
+    desc: "Bom anime. A 1ª temporada é ótima nos processos, mas as próximas esculacham e tiram muita coisa c#. O nível segue bom, só sinto que a trama sai do trilho e perde um pouco da essência.",
+    genre: "4, 8, 10"
   },
   {
     nome: "The Apothecary Diaries",
@@ -405,7 +691,8 @@ const animes = [
     eps: "0/48", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BNjAxMmFjZjgtYjM1ZS00NzdmLTliZDktZmIyMzU5YTBlNDBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "6"
   },
   {
     nome: "ONIMAI: I'm Now Your Sister!",
@@ -417,7 +704,8 @@ const animes = [
     eps: "1/12", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BYWY4Yzk4M2ItNGMxMi00YWM3LWFlNzAtMzZiNWM5Y2FlNDllXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Olha, esse anime não é destinado pro meu nicho; e eu não veria nem se me pagassem. É um negócio esquisito demais. Eu não vou nem dar nota pra isso."
+    desc: "Olha, esse anime não é destinado pro meu nicho; e eu não veria nem se me pagassem. É um negócio esquisito demais. Eu não vou nem dar nota pra isso.",
+    genre: "4, 9"
   },
   {
     nome: "KonoSuba: An Explosion on This Wonderful World!",
@@ -429,7 +717,8 @@ const animes = [
     eps: "12/12", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BYTRiM2VmNjgtZWY5ZS00YTIxLWJhMjAtY2UzYTk3NzM5ZTM2XkEyXkFqcGc@._V1_.jpg",
-    desc: "Spin-off brutal! Diferente de Konosuba, o foco não é comédia, mas a história da Megumin é sensacional. E ver o trio principal ao fundo das cenas é foda demais. Nostalgia absurda."
+    desc: "Spin-off brutal! Diferente de Konosuba, o foco não é comédia, mas a história da Megumin é sensacional. E ver o trio principal ao fundo das cenas é foda demais. Nostalgia absurda.",
+    genre: "4, 5, 7"
   },
   {
     nome: "Akashic Records of Bastard Magic Instructor",
@@ -441,7 +730,8 @@ const animes = [
     eps: "12/12", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BODgwMGJkZWEtNzFjMS00OTlkLTg0MjMtMTY5NmFjZmUwMjJjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Maior decepção até agora. O anime é BOM D+ Mas deixou MUITA coisa sem explicar e preparou TUDO pra 2ª temporada… que nunca vai vir. JÁ FAZ 7 ANOS DO LANÇAMENTO DESSA DESGRAÇA!"
+    desc: "Maior decepção até agora. O anime é BOM D+ Mas deixou MUITA coisa sem explicar e preparou TUDO pra 2ª temporada… que nunca vai vir. JÁ FAZ 7 ANOS DO LANÇAMENTO DESSA DESGRAÇA!",
+    genre: "3, 4, 7"
   },
   {
     nome: "Hell's Paradise",
@@ -453,7 +743,8 @@ const animes = [
     eps: "0/25", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZjhmMjhkNjUtMGU2MC00N2IzLTg1YzItZDk5ODMxMDYxODc0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "2, 7, 10"
   },
   {
     nome: "Yamada-kun to Lv999 no Koi wo Suru",
@@ -465,7 +756,8 @@ const animes = [
     eps: "0/13", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BOGU4NzQ3YzQtOTU4MC00ZGMzLThlOGMtODMzODg3YzM1Mzg2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "1, 4, 9"
   },
   {
     nome: "A Gatherer's Adventure in Isekai",
@@ -477,7 +769,8 @@ const animes = [
     eps: "0/12", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMmQ2NTkwNDQtZmMwMi00MTZhLWJjNzgtOWUzMGU2MDU3MDI5XkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "5, 7"
   },
   {
     nome: "Jujutsu Kaisen",
@@ -489,7 +782,8 @@ const animes = [
     eps: "0/59", 
     filmes: "0/3",
     img: "https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "2, 7, 10"
   },
   {
     nome: "komi-san can't communicate",
@@ -501,7 +795,8 @@ const animes = [
     eps: "0/24", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZGMzZDY0MDUtYzY5OS00NmI0LTlhZmUtZGM2NjVjNjdiNThlXkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "4, 9"
   },
   {
     nome: "Blend S",
@@ -513,7 +808,8 @@ const animes = [
     eps: "0/12", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BNzViYzJkODItZDAyMy00NjU1LWEwMzUtOWRlY2Y0YTA3MzM4XkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "4, 9"
   },
   {
     nome: "Yu Yu Hakusho",
@@ -525,7 +821,8 @@ const animes = [
     eps: "0/112", 
     filmes: "0/2",
     img: "https://m.media-amazon.com/images/M/MV5BNWJmODlhODItZTZmYi00ZGNjLTk1NmYtMjE5M2IwYjI2MzI2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "2, 10"
   },
   {
     nome: "Beast Tamer",
@@ -537,7 +834,8 @@ const animes = [
     eps: "0/13", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZGU4OTdkNjctNTYyYS00M2U4LWE4YjEtZjYzMzVhNmRjYzUzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "5, 7"
   },
   {
     nome: "Date A Live",
@@ -549,7 +847,8 @@ const animes = [
     eps: "0/58", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BM2I5OGRiZWMtYjk1NS00ZGZiLWJiYTktMGJjMGRiNDhlNzI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "1, 3, 4, 8"
   },
   {
     nome: "Fate/strange Fake",
@@ -561,7 +860,8 @@ const animes = [
     eps: "0/14", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMzIyZDNmMmUtMGZkNC00MTJjLTlmYzUtODllYWM5NDQ4YTJjXkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "2, 7"
   },
   {
     nome: "The Unaware Atelier Meister",
@@ -573,7 +873,8 @@ const animes = [
     eps: "0/12", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BNDYxZmY2ZmItZGViMS00ZTUyLWFjOWEtY2UzZDI2NzZhZDc4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "5, 7"
   },
   {
     nome: "Chainsaw Man",
@@ -585,7 +886,8 @@ const animes = [
     eps: "0/12", 
     filmes: "0/1",
     img: "https://m.media-amazon.com/images/M/MV5BZGY2ZTM2MWMtNzA2OS00ZjJlLWIwZTMtMDBhN2EwYjZjZjEyXkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "2, 3, 10"
   },
   {
     nome: "Life with an Ordinary Guy Who Reincarnated into a Total Fantasy Knockout",
@@ -597,7 +899,8 @@ const animes = [
     eps: "0/12", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZjAwMGM4NzAtNzMxNi00NGExLWE5MmItOGMzNWJhODI0MTcxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "1, 4, 5, 7"
   },
   {
     nome: "Love, Chunibyo & Other Delusions!",
@@ -609,7 +912,8 @@ const animes = [
     eps: "0/24",
     filmes: "0/2",
     img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSShTomQV1X0sILvFNZ4Hbkeo4xlbCYAZprTQ0P7yJmztjLfcII",
-    desc: "???"
+    desc: "???",
+    genre: "1, 4, 9"
   },
   {
     nome: "ID: INVADED",
@@ -621,7 +925,8 @@ const animes = [
     eps: "0/13",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZWIwMmUwZGUtNTJiNy00Y2M1LTgxYjItODdhYTc3OGUxMGNkXkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "6, 8"
   },
   {
     nome: "Maken-ki!",
@@ -633,7 +938,8 @@ const animes = [
     eps: "0/23",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZTAyNjY5MzAtYWMyNy00MWIyLTk2M2MtYzFhYTYwOWRlNjg0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "2, 3, 4"
   },
   {
     nome: "Kämpfer",
@@ -645,7 +951,8 @@ const animes = [
     eps: "0/14",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BNTQzNGYzNTItNTIzNS00YjQzLTg1ZTctY2M0MDdkZDYwODU2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "2, 3, 4, 8"
   },
   {
     nome: "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You",
@@ -657,7 +964,8 @@ const animes = [
     eps: "0/24",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMTc5MTE3MTktN2MwYy00M2UwLTlhMzEtNDE5YjBmMTUzMGRkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "1, 3, 4"
   },
   {
     nome: "Trapped in a Dating Sim: The World of Otome Games Is Tough for Mobs",
@@ -669,7 +977,8 @@ const animes = [
     eps: "0/12",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMzE3OTk2YmQtZmQ2NS00ZGFjLTlkOWItNmExNjExMWYwOTFhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "4, 5, 7"
   },
   {
     nome: "Tenpuru",
@@ -681,7 +990,8 @@ const animes = [
     eps: "0/13",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMzhiODBjNWQtNzI1Ny00YmY4LTlmYjItMjk0M2Y3MTNiYjUzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "1, 3, 4"
   },
   {
     nome: "Dungeon Meshi",
@@ -693,7 +1003,8 @@ const animes = [
     eps: "0/24",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BNjRiNzI1MTYtZDg0Mi00NWFiLTg1MWItNjNkMmM5NjU3MWEyXkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "4, 7"
   },
   {
     nome: "BOFURI: I Don't Want to Get Hurt, so I'll Max Out My Defense.",
@@ -705,7 +1016,8 @@ const animes = [
     eps: "0/24",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BYzNlMWNkN2MtNmJjZi00YjcxLTgwMjEtNjhlODc1Yjg2NGM4XkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "2, 4, 7"
   },
   {
     nome: "Sugoi Dekai",
@@ -717,7 +1029,8 @@ const animes = [
     eps: "0/25",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMDQyOTc5NWUtODRmOC00NDUwLWIwOTMtNDBlZTBlOTY3YjA3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "1, 4, 9"
   },
   {
     nome: "Maoyuu Maou Yuusha",
@@ -729,7 +1042,8 @@ const animes = [
     eps: "0/12",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMmY4ZDk3NDktOWMxNS00M2QzLWFhYjMtN2E1ZTVmMDQ5NjIwXkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "1, 7"
   },
   {
     nome: "A Journey Through Another World: Raising Kids While Adventuring",
@@ -741,7 +1055,8 @@ const animes = [
     eps: "0/12",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BNjhjMTYyMDMtMmRjOS00MTYwLTgzMTktNGVhOTZiYjBmOWRmXkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "5, 7, 9"
   },
   {
     nome: "Back Street Girls: Gokudols",
@@ -753,7 +1068,8 @@ const animes = [
     eps: "0/10",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMjRiZWMzYWQtMDI2NC00OGE2LThkOGMtNDNiYWQ0ZjA2ZmFhXkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "4, 9"
   },
   {
     nome: "Trigun",
@@ -765,7 +1081,8 @@ const animes = [
     eps: "0/26",
     filmes: "0/2",
     img: "https://m.media-amazon.com/images/M/MV5BNjVjZDE0MzEtN2Q1Mi00YjgyLWE0NTMtMWJiNDA5MGRmMmM2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "2, 8"
   },
   {
     nome: "Grisaia no Kajitsu",
@@ -777,7 +1094,8 @@ const animes = [
     eps: "0/13",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BYmI2ODI1OTAtMzU4YS00NDUyLWI2MGEtNzQ1NmIxZTk1NDhmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "1, 3, 6"
   },
   {
     nome: "Murenase! Seton Gakuen",
@@ -789,7 +1107,8 @@ const animes = [
     eps: "0/12",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BNDdjMGJlOWItYWUyZC00MDI1LWIwM2EtODk4M2NhYjg3MDI5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "4, 9"
   },
   {
     nome: "Farming Life in Another World",
@@ -801,7 +1120,8 @@ const animes = [
     eps: "0/24",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BYTY5NWMzNTEtZGIxYS00Yzk4LWE5MmQtYTdmZDVmNzEzYjU3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "5, 7, 9"
   },
   {
     nome: "Kono Sekai wa Fukanzen Sugiru",
@@ -813,7 +1133,8 @@ const animes = [
     eps: "0/13",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMTc2MGM2M2EtZGIzNS00ODdhLWJhOWMtZGM1N2I3ZTQ3ZWNkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "2, 5, 7"
   },
   {
     nome: "Uma Musume: Pretty Derby",
@@ -825,7 +1146,8 @@ const animes = [
     eps: "0/39",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BYTNjOThhZTEtMmQzOC00NmZiLWFiYmItODJlNDM2YTQ4ZTYzXkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
+    desc: "???",
+    genre: "4, 9"
   },
   {
     nome: "The Case Study of Vanitas",
@@ -837,8 +1159,9 @@ const animes = [
     eps: "0/24",
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BMzYwMmI1YWMtOTc0My00OGI3LWI3ZDctZmMwYjczYzcxMjI4XkEyXkFqcGc@._V1_.jpg",
-    desc: "???"
-  },
+    desc: "???",
+    genre: "2, 7"
+  }
 ];
 
 const container = document.querySelector(".container");
@@ -854,7 +1177,7 @@ function renderizar(lista) {
     <div class="card ${anime.dropado ? "dropado" : ""} ${anime.brutal ? "brutal" : ""}">
       ${anime.dropado ? `<div class="drop-label">DROPADO</div>` : ""}
       ${anime.brutal ? `<div class="brutal-label">BRUTAL</div>` : ""}
-      <img class="banner" src="${anime.img}">
+      <img class="banner" src="${anime.img}" style="cursor:pointer;" onclick="abrirModal('${anime.nome.replace(/'/g, "\\'")}')">
       <div class="content">
         <div class="title">${anime.nome}</div>
         <div class="info">
@@ -907,9 +1230,131 @@ btnOrdem.addEventListener("click", () => {
   btnOrdem.innerText = ordemCrescente ? "⬆️ Crescente" : "⬇️ Decrescente";
   filtrarEOrdenar();
 });
+
+const bibliotecaGeneros = {
+  1: "Romance",
+  2: "Ação",
+  3: "Ecchi",
+  4: "Comédia",
+  5: "Isekai",
+  6: "Drama",
+  7: "Fantasia",
+  8: "Sci-Fi",
+  9: "Slice of Life",
+  10: "Shonen"
+};
+
+function abrirModal(nomeAnime) {
+  if (!nomeAnime) return;
+
+  const anime = animes.find(a => a.nome === nomeAnime);
+  if (!anime) return;
+
+  const modal = document.getElementById("animeModal");
+  const content = document.getElementById("modalContent");
+  
+  if (!modal || !content) return;
+  
+  document.getElementById("modalHeader").style.backgroundImage = `url('${anime.img}')`;
+  document.getElementById("modalTitle").innerText = anime.nome;
+  
+  const descElement = document.getElementById("modalDesc");
+  if (anime.desc === "???") {
+    descElement.innerText = "Este anime ainda não tem uma análise definida. Pipocado está preparando o veredito! 🍿";
+  } else {
+    descElement.innerText = anime.desc;
+  }
+
+  let assistidos = 0;
+  let totais = 0;
+  let porcentagem = 0;
+
+  if (anime.eps && anime.eps.includes("/")) {
+    const partes = anime.eps.split("/");
+    assistidos = parseInt(partes[0]) || 0;
+    totais = parseInt(partes[1]) || 0;
+    
+    if (totais > 0) {
+      porcentagem = Math.min(Math.round((assistidos / totais) * 100), 100);
+    }
+  }
+
+  let tagsHTML = "";
+  if (anime.genre) {
+    const idsGeneros = anime.genre.split(",").map(id => id.trim());
+    idsGeneros.forEach(id => {
+      const nomeGenero = bibliotecaGeneros[id];
+      if (nomeGenero) {
+        tagsHTML += `<span class="genre-tag">${nomeGenero}</span>`;
+      }
+    });
+  }
+
+  document.getElementById("modalGridInfo").innerHTML = `
+    <div>⭐ Nota: ${anime.nota > 0 ? anime.nota.toFixed(1) : "Sem Nota ⏳"}</div>
+    <div>🎙️ Áudio: ${anime.dublado ? "Dublado" : "Legendado"}</div>
+    ${anime.filmes !== 0 && anime.filmes !== "0/0" ? `<div>🎬 Filmes: ${anime.filmes}</div>` : ""}
+    
+    <div class="progress-container">
+      <div class="progress-labels">
+        <span>📊 Progresso:</span>
+        <span>${assistidos} / ${totais} eps</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" style="width: ${porcentagem}%"></div>
+        <div class="progress-percentage-floating" style="left: ${porcentagem}%">${porcentagem}%</div>
+      </div>
+    </div>
+
+    <div class="modal-genres-wrapper">
+      <div class="modal-genres-title">🎭 Gêneros:</div>
+      <div class="modal-genres-list">${tagsHTML || '<span class="genre-tag">Não informado</span>'}</div>
+    </div>
+  `;
+
+  content.className = "modal-content"; 
+  if (anime.brutal) content.classList.add("brutal-border");
+  if (anime.dropado) content.classList.add("dropado-border");
+
+  modal.classList.add("active");
+}
+
+function fecharModal() {
+  const modal = document.getElementById("animeModal");
+  if (modal) modal.classList.remove("active");
+}
+
+const animeModalEl = document.getElementById("animeModal");
+if (animeModalEl) {
+  animeModalEl.addEventListener("click", (e) => {
+    if (e.target.id === "animeModal") fecharModal();
+  });
+}
   
 renderizar(animes);
 </script>
+
+<div class="info-popup-wrapper">
+  <div class="info-popout">
+    <strong>Aviso Importante:</strong><br>
+    Todos os animes do catálogo foram escolhidos por recomendação ou por cortes no YouTube/Instagram, então não sou responsável por qualquer anime esquisito 🙂. Além disso, todas as notas e análises são exclusivamente pessoais. Eu posso não ter gostado de algum anime que você goste, mas isso não é ruim! É uma oportunidade! Converse comigo, mostre seus pontos de vista, ficaria feliz em bater um papo sobre! 🍷🗿
+  </div>
+  <div class="info-btn">!</div>
+</div>
+
+<!-- Estrutura do Modal (Aba expandida) -->
+<div class="modal-overlay" id="animeModal">
+  <div class="modal-content" id="modalContent">
+    <button class="btn-fechar" onclick="fecharModal()">✕</button>
+    <div class="modal-header" id="modalHeader"></div>
+    <div class="modal-body">
+      <div class="modal-title" id="modalTitle">Nome do Anime</div>
+      <div class="modal-grid-info" id="modalGridInfo"></div>
+      <div class="modal-review-title">✍️ Análise do Pipocado:</div>
+      <div class="modal-desc" id="modalDesc">Descrição aqui...</div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
