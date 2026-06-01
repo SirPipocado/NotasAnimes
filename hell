@@ -810,16 +810,16 @@ const animes = [
   },
   {
     nome: "Hell's Paradise",
-    nota: 0.0,
+    nota: 7.8,
     imdb: 8.1,
-    dublado: false,
-    finalizado: false,
+    dublado: true,
+    finalizado: true,
     dropado: false,
     brutal: false,
-    eps: "0/25", 
+    eps: "25/25", 
     filmes: 0,
     img: "https://m.media-amazon.com/images/M/MV5BZjhmMjhkNjUtMGU2MC00N2IzLTg1YzItZDk5ODMxMDYxODc0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???",
+    desc: "Ótimo anime. O estilo artístico é incrível e as batalhas são extremamente bonitas. Uma pena que a história ainda não foi finalizada.",
     genre: "2, 7, 10"
   },
   {
