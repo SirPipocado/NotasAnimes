@@ -410,7 +410,7 @@ button:hover { background: #2563eb; }
     <option value="padrao">Ordem: Padrão</option>
     <option value="nome">Ordem: Nome (A-Z)</option>
     <option value="nota">Ordem: Maior Nota</option>
-    <option valure=imbd">Ordem: Maior Nota IMDB</option>
+    <option value="imdb">Ordem: Maior Nota IMDB</option>
   </select>
 
   <button id="ordem">⬆️ Crescente</button>
@@ -1322,7 +1322,7 @@ function filtrarEOrdenar() {
     return bateNome && bateGenero;
   });
 
-  if (ordenacaoSelecionada === "nome") {
+if (ordenacaoSelecionada === "nome") {
   resultado.sort((a, b) => a.nome.localeCompare(b.nome));
 } else if (ordenacaoSelecionada === "nota") {
   resultado.sort((a, b) => b.nota - a.nota);
