@@ -1323,16 +1323,16 @@ function filtrarEOrdenar() {
   });
 
   if (ordenacaoSelecionada === "nome") {
-    resultado.sort((a, b) => a.nome.localeCompare(b.nome));
-  } else if (ordenacaoSelecionada === "nota") {
-    resultado.sort((a, b) => b.nota - a.nota);
-  } else if (ordenacaoSelecionada === "imdb") {
-    resultado.sort((a, b) => b.imdb - a.imdb);
-  }
+  resultado.sort((a, b) => a.nome.localeCompare(b.nome));
+} else if (ordenacaoSelecionada === "nota") {
+  resultado.sort((a, b) => b.nota - a.nota);
+} else if (ordenacaoSelecionada === "imdb") {
+  resultado.sort((a, b) => b.imdb - a.imdb);
+}
 
-  if (!ordemCrescente) {
-    resultado.reverse();
-  }
+if (!ordemCrescente) {
+  resultado.reverse();
+}
 
   renderizar(resultado);
 }
