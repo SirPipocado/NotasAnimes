@@ -436,7 +436,7 @@ button:hover { background: #2563eb; }
     <div class="modal-body">
       <div class="modal-title" id="modalTitle">Nome do Anime</div>
       <div class="modal-grid-info" id="modalGridInfo"></div>
-      <div class="modal-review-title">✍️ Análise do Pipocado:</div>
+      <div class="modal-review-title">✍️Minha Análise:</div>
       <div class="modal-desc" id="modalDesc">Descrição aqui...</div>
     </div>
   </div>
@@ -1375,7 +1375,7 @@ function abrirModal(nomeAnime) {
   
   const descElement = document.getElementById("modalDesc");
   if (anime.desc === "???") {
-    descElement.innerText = "Este anime ainda não tem uma análise definida. Pipocado está preparando o veredito! 🍿";
+    descElement.innerText = "Este anime ainda não tem uma análise definida. Estou preparando o veredito! 🍿";
   } else {
     descElement.innerText = anime.desc;
   }
