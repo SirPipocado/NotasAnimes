@@ -137,7 +137,7 @@ document.getElementById("modalGridInfo").innerHTML = `
     <div class="progress-container">
       <div class="progress-labels">
         <span>📊 Progresso:</span>
-        <span>${assistidos} / ${totais} eps</span>
+        <span>${assistidos} / ${anime.emLancamento ? "?" : totais} eps</span>
       </div>
       <div class="progress-bar-bg">
         <div class="progress-bar-fill" style="width: ${porcentagem}%"></div>
