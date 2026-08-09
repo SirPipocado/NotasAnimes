@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Minha Lista de Animes</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+input, select, button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #1e293b;
+  color: white;
+  outline: none;
+}
+
+input { width: 250px; border: 1px solid #334155; }
+button { cursor: pointer; background: #3b82f6; font-weight: bold; }
+button:hover { background: #2563eb; }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 220px);
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 220px;
+  background: #1e293b;
+  border-radius: 16px;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.45);
+
+  z-index: 5;
+}
+
+.banner {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.content {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title { font-size: 15px; font-weight: bold; }
+.info { margin: 5px 0 10px 0; font-size: 13px; color: #cbd5f5; }
+.desc {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.4;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card.dropado { 
+  background: #2a0f0f; border: 2px solid #ff4d4d; }
+.drop-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #ff4d4d;
+  color: #fff;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  z-index: 10;
+}
+
+.card.brutal { 
+  background: #3a2e0f; 
+  border: 2px solid #facc15; 
+}
+
+.brutal-label {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #facc15;
+  color: #000;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  z-index: 10;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  background: #1e293b;
+  width: 90%;
+  max-width: 550px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  border: 2px solid #334155;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-content.brutal-border { border-color: #facc15; }
+.modal-content.dropado-border { border-color: #ff4d4d; }
+
+.modal-header {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.modal-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, #1e293b);
+}
+
+.btn-fechar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+}
+
+.btn-fechar:hover { 
+  background: rgba(255, 77, 77, 0.6); 
+}
+
+.modal-body {
+  padding: 25px;
+  color: #e5e7eb;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.modal-grid-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-review-title {
+  color: #facc15;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.modal-desc {
+  font-size: 14px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.info-popup-wrapper {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.info-btn {
+  width: 50px;
+  height: 50px;
+  background-color: #facc15;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.info-popout {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 280px;
+  background: #1e293b;
+  color: #e5e7eb;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #facc15;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  font-size: 14px;
+  line-height: 1.5;
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+}
+
+.info-popup-wrapper:hover .info-popout {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.info-popup-wrapper:hover .info-btn {
+  transform: scale(1.1);
+}
+
+.progress-container {
+  grid-column: span 2;
+  margin: 15px 0 25px 0;
+  position: relative;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: bold;
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 12px;
+  background: #334155;
+  border-radius: 6px;
+  overflow: visible;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: #3b82f6;
+  border-radius: 6px;
+  transition: width 0.5s ease-out;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+.progress-percentage-floating {
+  position: absolute;
+  top: 16px;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: #cbd5e1;
+  transition: left 0.5s ease-out;
+}
+
+.modal-content.brutal-border .progress-bar-fill {
+  background: #facc15;
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.5);
+}
+.modal-content.brutal-border .progress-percentage-floating {
+  color: #facc15;
+}
+
+.modal-content.dropado-border .progress-bar-fill {
+  background: #ff4d4d;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.5);
+}
+.modal-content.dropado-border .progress-percentage-floating {
+  color: #ff4d4d;
+}
+
+.modal-genres-wrapper {
+  grid-column: span 2;
+  margin-bottom: 15px;
+}
+
+.modal-genres-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #cbd5e1;
+  margin-bottom: 8px;
+}
+
+.modal-genres-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.genre-tag {
+  background: #334155;
+  color: #f8fafc;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #475569;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>📺 Minha Lista de Animes</h1>
+
+<div class="toolbar">
+  <input type="text" id="search" placeholder="Pesquisar anime...">
+  
+  <select id="filtroGenero">
+    <option value="">Todos os Gêneros</option>
+    <option value="1">Romance</option>
+    <option value="2">Ação</option>
+    <option value="3">Ecchi</option>
+    <option value="4">Comédia</option>
+    <option value="5">Isekai</option>
+    <option value="6">Drama</option>
+    <option value="7">Fantasia</option>
+    <option value="8">Sci-Fi</option>
+    <option value="9">Slice of Life</option>
+    <option value="10">Shounen</option>
+  </select>
+
+  <select id="tipoOrdem">
+    <option value="padrao">Ordem: Padrão</option>
+    <option value="nome">Ordem: Nome (A-Z)</option>
+    <option value="nota">Ordem: Maior Nota</option>
+    <option value="imdb">Ordem: Maior Nota IMDB</option>
+  </select>
+
+  <button id="ordem">⬆️ Crescente</button>
+</div>
+
+<div class="container"></div>
+
+<div class="info-popup-wrapper">
+  <div class="info-popout">
+    <strong>📊 Estatísticas do Catálogo:</strong>
+    <div id="estatisticasGerais" style="margin: 5px 0 15px 0; font-size: 13px; line-height: 1.4; color: #cbd5e1;"></div>
+    <hr style="border: 0; border-top: 1px solid #334155; margin-bottom: 10px;">
+    <strong>Aviso Importante:</strong><br>
+    Todos os animes do catálogo foram escolhidos por recomendação ou por cortes no YouTube/Instagram, então não sou responsável por qualquer anime esquisito 🙂. Além disso, todas as notas e análises são exclusivamente pessoais. Eu posso não ter gostado de algum anime que você goste, mas isso não é ruim! É uma oportunidade! Converse comigo, mostre seus pontos de vista, ficaria feliz em bater um papo sobre! 🍷🗿 (Notas do IMDB pegas dia 31/05/26)
+  </div>
+  <div class="info-btn">!</div>
+</div>
+
+<div class="modal-overlay" id="animeModal">
+  <div class="modal-content" id="modalContent">
+    <button class="btn-fechar" onclick="fecharModal()">✕</button>
+    <div class="modal-header" id="modalHeader"></div>
+    <div class="modal-body">
+      <div class="modal-title" id="modalTitle">Nome do Anime</div>
+      <div class="modal-grid-info" id="modalGridInfo"></div>
+      <div class="modal-review-title">✍️Minha Análise:</div>
+      <div class="modal-desc" id="modalDesc">Descrição aqui...</div>
+    </div>
+  </div>
+</div>
+
+<script src="./animes.js"></script>
+
+<script>
+const container = document.querySelector(".container");
+const inputBusca = document.getElementById("search");
+const btnOrdem = document.getElementById("ordem");
+
+let ordemCrescente = true;
+
+function renderizar(lista) {
+  const html = lista.map(anime => `
+    <div class="card ${anime.dropado ? "dropado" : ""} ${anime.brutal ? "brutal" : ""}" onclick="abrirModal('${anime.nome.replace(/'/g, "\\'")}')">
+      ${anime.dropado ? `<div class="drop-label">DROPADO</div>` : ""}
+      ${anime.brutal ? `<div class="brutal-label">BRUTAL</div>` : ""}
+      <img class="banner" src="${anime.img}">
+      <div class="content">
+        <div class="title">${anime.nome}</div>
+        <div class="info">
+          <div>⭐ ${anime.nota > 0 ? anime.nota.toFixed(1) : "-.-"}</div>
+          <div>🎙️ ${anime.dublado ? "Dublado" : "Legendado"}</div>
+          <div>📺 ${anime.finalizado ? "Finalizado" : `Não finalizado${anime.emLancamento ? " (Em Lançamento)" : ""}`}</div>
+          <div>📊 Eps: ${anime.emLancamento ? anime.eps.split("/")[0] + "/?" : anime.eps}</div>
+        </div>
+        <div class="desc">${anime.desc}</div>
+      </div>
+    </div>
+  `).join('');
+  container.innerHTML = html;
+}
+
+function filtrarEOrdenar() {
+  const termo = inputBusca.value.toLowerCase();
+  const generoSelecionado = document.getElementById("filtroGenero").value;
+  const ordenacaoSelecionada = document.getElementById("tipoOrdem").value;
+
+  let resultado = animes.filter(anime => {
+    const bateNome = anime.nome.toLowerCase().includes(termo);
+    
+    let bateGenero = true;
+    if (generoSelecionado) {
+      if (anime.genre) {
+        const ids = anime.genre.split(",").map(id => id.trim());
+        bateGenero = ids.includes(generoSelecionado);
+      } else {
+        bateGenero = false;
+      }
+    }
+
+    return bateNome && bateGenero;
+  });
+
+if (ordenacaoSelecionada === "nome") {
+  resultado.sort((a, b) => a.nome.localeCompare(b.nome));
+} else if (ordenacaoSelecionada === "nota") {
+  resultado.sort((a, b) => b.nota - a.nota);
+} else if (ordenacaoSelecionada === "imdb") {
+  resultado.sort((a, b) => b.imdb - a.imdb);
+}
+
+if (!ordemCrescente) {
+  resultado.reverse();
+}
+
+  renderizar(resultado);
+}
+
+inputBusca.addEventListener("input", filtrarEOrdenar);
+document.getElementById("filtroGenero").addEventListener("change", filtrarEOrdenar);
+document.getElementById("tipoOrdem").addEventListener("change", filtrarEOrdenar);
+btnOrdem.addEventListener("click", () => {
+  ordemCrescente = !ordemCrescente;
+  btnOrdem.innerText = ordemCrescente ? "⬆️ Crescente" : "⬇️ Decrescente";
+  filtrarEOrdenar();
+});
+
+const bibliotecaGeneros = {
+  1: "Romance",
+  2: "Ação",
+  3: "Ecchi",
+  4: "Comédia",
+  5: "Isekai",
+  6: "Drama",
+  7: "Fantasia",
+  8: "Sci-Fi",
+  9: "Slice of Life",
+  10: "Shonen"
+};
+
+function abrirModal(nomeAnime) {
+  if (!nomeAnime) return;
+
+  const anime = animes.find(a => a.nome === nomeAnime);
+  if (!anime) return;
+
+  const modal = document.getElementById("animeModal");
+  const content = document.getElementById("modalContent");
+  
+  if (!modal || !content) return;
+  
+  document.getElementById("modalHeader").style.backgroundImage = `url('${anime.img}')`;
+  document.getElementById("modalTitle").innerText = anime.nome;
+  
+  const descElement = document.getElementById("modalDesc");
+  if (anime.desc === "???") {
+    descElement.innerText = "Este anime ainda não tem uma análise definida. Ainda estou assistindo! 🍿";
+  } else {
+    descElement.innerText = anime.desc;
+  }
+
+  let assistidos = 0;
+  let totais = 0;
+  let porcentagem = 0;
+
+  if (anime.eps && anime.eps.includes("/")) {
+    const partes = anime.eps.split("/");
+    assistidos = parseInt(partes[0]) || 0;
+    totais = parseInt(partes[1]) || 0;
+    
+    if (totais > 0) {
+      porcentagem = Math.min(Math.round((assistidos / totais) * 100), 100);
+    }
+  }
+
+  let tagsHTML = "";
+  if (anime.genre) {
+    const idsGeneros = anime.genre.split(",").map(id => id.trim());
+    idsGeneros.forEach(id => {
+      const nomeGenero = bibliotecaGeneros[id];
+      if (nomeGenero) {
+        tagsHTML += `<span class="genre-tag">${nomeGenero}</span>`;
+      }
+    });
+  }
+
+document.getElementById("modalGridInfo").innerHTML = `
+    <div>⭐ Minha Nota: ${anime.nota > 0 ? anime.nota.toFixed(1) : "-.-"}</div>
+    <div>⭐ Nota IMDB: ${anime.imdb > 0 ? anime.imdb.toFixed(1) : "-.-"}</div>
+    <div>🎙️ Áudio: ${anime.dublado ? "Dublado" : "Legendado"}</div>
+    
+    <div class="progress-container">
+      <div class="progress-labels">
+        <span>📊 Progresso:</span>
+        <span>${assistidos} / ${totais} eps</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" style="width: ${porcentagem}%"></div>
+        <div class="progress-percentage-floating" style="left: ${porcentagem}%">${porcentagem}%</div>
+      </div>
+    </div>
+
+    <div class="modal-genres-wrapper">
+      <div class="modal-genres-title">🎭 Gêneros:</div>
+      <div class="modal-genres-list">${tagsHTML || '<span class="genre-tag">Não informado</span>'}</div>
+    </div>
+  `;
+
+  content.classList.remove("brutal-border", "dropado-border"); 
+  if (anime.brutal) content.classList.add("brutal-border");
+  if (anime.dropado) content.classList.add("dropado-border");
+
+  modal.classList.add("active");
+}
+
+function fecharModal() {
+  const modal = document.getElementById("animeModal");
+  if (modal) modal.classList.remove("active");
+}
+
+const animeModalEl = document.getElementById("animeModal");
+if (animeModalEl) {
+  animeModalEl.addEventListener("click", (e) => {
+    if (e.target.id === "animeModal") fecharModal();
+  });
+}
+
+function atualizarEstatisticas() {
+  const totalAnimes = animes.length;
+  let assistidos = 0;
+  let pendentes = 0;
+  let totalBrutais = 0;
+  let totalDropados = 0;
+  let somaNotas = 0;
+  let animesComNota = 0;
+
+  animes.forEach(anime => {
+    if (anime.brutal) totalBrutais++;
+    if (anime.dropado) totalDropados++;
+
+    if (anime.nota > 0) {
+      somaNotas += anime.nota;
+      animesComNota++;
+    }
+
+    let epsAssistidos = 0;
+    if (anime.eps && anime.eps.includes("/")) {
+      epsAssistidos = parseInt(anime.eps.split("/")[0]) || 0;
+    }
+
+    if (anime.finalizado || epsAssistidos > 0) {
+      assistidos++;
+    } else if (!anime.dropado) {
+      pendentes++;
+    }
+  });
+
+  const notaMedia = animesComNota > 0 ? (somaNotas / animesComNota).toFixed(1) : "-.-";
+
+  const divEst = document.getElementById("estatisticasGerais");
+  if (divEst) {
+    divEst.innerHTML = `
+      📺 Total de Animes: <strong>${totalAnimes}</strong><br>
+      ✅ Assistidos: <strong>${assistidos}</strong><br>
+      ⏳ Pendentes: <strong>${pendentes}</strong><br>
+      ⭐ Nota Média: <strong>${notaMedia}</strong><br>
+      🔥 Brutais: <strong>${totalBrutais}</strong> | ❌ Dropados: <strong>${totalDropados}</strong>
+    `;
+  }
+}
+  
+filtrarEOrdenar();
+atualizarEstatisticas();
+</script>
+
+</body>
+</html>
