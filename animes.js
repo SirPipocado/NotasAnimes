@@ -825,5 +825,19 @@ const animes = [
     img: "https://m.media-amazon.com/images/M/MV5BMzYwMmI1YWMtOTc0My00OGI3LWI3ZDctZmMwYjczYzcxMjI4XkEyXkFqcGc@._V1_.jpg",
     desc: "???",
     genre: "2, 7"
+  },
+  {
+    nome: "The Fragrant Flower Blooms with Dignity",
+    nota: 0.0,
+    imdb: 8.3,
+    dublado: true,
+    finalizado: false,
+    emLancamento: false,
+    dropado: false,
+    brutal: false,
+    eps: "0/13",
+    img: "https://m.media-amazon.com/images/M/MV5BY2Q0NTNlMTAtZGVkYS00NDU1LThjYzYtZDQ3M2U5NGJiNzhkXkEyXkFqcGc@._V1_.jpg",
+    desc: "???",
+    genre: "1, 4, 6, 9, 10"
   }
 ];
