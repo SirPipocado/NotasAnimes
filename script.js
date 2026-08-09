@@ -15,7 +15,7 @@ function renderizar(lista) {
         <div class="info">
           <div>⭐ ${anime.nota > 0 ? anime.nota.toFixed(1) : "-.-"}</div>
           <div>🎙️ ${anime.dublado ? "Dublado" : "Legendado"}</div>
-          <div>📺 ${anime.finalizado ? "Finalizado" : `Não finalizado${anime.emLancamento ? " (Em Lançamento)" : ""}`}</div>
+          <div>📺 ${anime.finalizado ? "Finalizado" : anime.emLancamento ? "Em lançamento" : "Não finalizado"}</div>
           <div>📊 Eps: ${anime.emLancamento ? anime.eps.split("/")[0] + "/?" : anime.eps}</div>
         </div>
         <div class="desc">${anime.desc}</div>
