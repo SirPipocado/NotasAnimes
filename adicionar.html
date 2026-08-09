@@ -43,24 +43,10 @@ textarea {
   color: white;
 }
 
-textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.duplo {
-  display: flex;
-  gap: 10px;
-}
-
-.duplo > div {
-  flex: 1;
-}
-
 .checks {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 25px;
   margin-top: 10px;
 }
 
@@ -113,57 +99,44 @@ button:hover {
   <label>Nome</label>
   <input id="nome">
 
-  <div class="duplo">
-    <div>
-      <label>Minha Nota</label>
-      <input id="nota" type="number" step="0.1" value="0">
-    </div>
-
-    <div>
-      <label>Nota IMDB</label>
-      <input id="imdb" type="number" step="0.1" value="0">
-    </div>
-  </div>
+  <label>Nota IMDB</label>
+  <input id="imdb" type="number" step="0.1" value="0">
 
   <label>Status</label>
 
   <div class="checks">
-    <label><input type="checkbox" id="dublado"> Dublado</label>
-    <label><input type="checkbox" id="finalizado"> Finalizado</label>
-    <label><input type="checkbox" id="emLancamento"> Em lançamento</label>
-    <label><input type="checkbox" id="dropado"> Dropado</label>
-    <label><input type="checkbox" id="brutal"> Brutal</label>
+    <label>
+      <input type="checkbox" id="dublado">
+      Dublado
+    </label>
+
+    <label>
+      <input type="checkbox" id="emLancamento">
+      Em lançamento
+    </label>
   </div>
 
-  <div class="duplo">
-    <div>
-      <label>Episódios assistidos</label>
-      <input id="epsAssistidos" type="number" value="0">
-    </div>
-
-    <div>
-      <label>Total de episódios</label>
-      <input id="epsTotais" type="number" value="12">
-    </div>
-  </div>
+  <label>Total de episódios</label>
+  <input id="epsTotais" type="number" value="12">
 
   <label>Link da imagem</label>
   <input id="img">
-
-  <label>Descrição</label>
-  <textarea id="desc">???</textarea>
 
   <label>Gêneros</label>
 
   <div class="generos">
     <label><input type="checkbox" class="genero" value="1"> Romance</label>
     <label><input type="checkbox" class="genero" value="2"> Ação</label>
+
     <label><input type="checkbox" class="genero" value="3"> Ecchi</label>
     <label><input type="checkbox" class="genero" value="4"> Comédia</label>
+
     <label><input type="checkbox" class="genero" value="5"> Isekai</label>
     <label><input type="checkbox" class="genero" value="6"> Drama</label>
+
     <label><input type="checkbox" class="genero" value="7"> Fantasia</label>
     <label><input type="checkbox" class="genero" value="8"> Sci-Fi</label>
+
     <label><input type="checkbox" class="genero" value="9"> Slice of Life</label>
     <label><input type="checkbox" class="genero" value="10"> Shounen</label>
   </div>
@@ -184,41 +157,40 @@ function textoSeguro(texto) {
 function gerarAnime() {
 
   const nome = document.getElementById("nome").value;
-  const nota = parseFloat(document.getElementById("nota").value) || 0;
-  const imdb = parseFloat(document.getElementById("imdb").value) || 0;
 
-  const dublado = document.getElementById("dublado").checked;
-  const finalizado = document.getElementById("finalizado").checked;
-  const emLancamento = document.getElementById("emLancamento").checked;
-  const dropado = document.getElementById("dropado").checked;
-  const brutal = document.getElementById("brutal").checked;
+  const imdb =
+    parseFloat(document.getElementById("imdb").value) || 0;
 
-  const assistidos =
-    document.getElementById("epsAssistidos").value || 0;
+  const dublado =
+    document.getElementById("dublado").checked;
+
+  const emLancamento =
+    document.getElementById("emLancamento").checked;
 
   const totais =
     document.getElementById("epsTotais").value || 0;
 
-  const img = document.getElementById("img").value;
-  const desc = document.getElementById("desc").value;
+  const img =
+    document.getElementById("img").value;
 
-  const generos = [...document.querySelectorAll(".genero:checked")]
-    .map(g => g.value)
-    .join(", ");
+  const generos =
+    [...document.querySelectorAll(".genero:checked")]
+      .map(g => g.value)
+      .join(", ");
 
   const resultado =
 `{
   nome: ${textoSeguro(nome)},
-  nota: ${nota.toFixed(1)},
+  nota: 0.0,
   imdb: ${imdb.toFixed(1)},
   dublado: ${dublado},
-  finalizado: ${finalizado},
+  finalizado: false,
   emLancamento: ${emLancamento},
-  dropado: ${dropado},
-  brutal: ${brutal},
-  eps: "${assistidos}/${totais}",
+  dropado: false,
+  brutal: false,
+  eps: "0/${totais}",
   img: ${textoSeguro(img)},
-  desc: ${textoSeguro(desc)},
+  desc: "???",
   genre: "${generos}"
 },`;
 
@@ -227,13 +199,15 @@ function gerarAnime() {
 
 function copiarAnime() {
 
-  const resultado = document.getElementById("resultado");
+  const resultado =
+    document.getElementById("resultado");
 
   if (!resultado.value) {
     gerarAnime();
   }
 
-  navigator.clipboard.writeText(resultado.value)
+  navigator.clipboard
+    .writeText(resultado.value)
     .then(() => {
       alert("Anime copiado! 🍿");
     });
