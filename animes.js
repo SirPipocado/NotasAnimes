@@ -1,6 +1,6 @@
 const animes = [
   {
-    nome: "Sono Bisque Doll wa Koi wo Suru",
+    nome: "My Dress-Up Darling",
     nota: 8.0,
     imdb: 8.0,
     dublado: true,
@@ -14,7 +14,7 @@ const animes = [
     genre: "1, 4, 9"
   },
   {
-    nome: "Kimetsu no Yaiba",
+    nome: "Demon Slayer",
     nota: 8.8,
     imdb: 8.6,
     dublado: true,
@@ -379,7 +379,7 @@ const animes = [
     genre: "2, 7, 10"
   },
   {
-    nome: "Yamada-kun to Lv999 no Koi wo Suru",
+    nome: "My Love Story with Yamada-kun at Lv999",
     nota: 5.5,
     imdb: 7.6,
     dublado: false,
@@ -421,7 +421,7 @@ const animes = [
     genre: "2, 7, 10"
   },
   {
-    nome: "komi-san can't communicate",
+    nome: "komi can't communicate",
     nota: 8.5,
     imdb: 7.7,
     dublado: true,
@@ -687,7 +687,7 @@ const animes = [
     genre: "1, 4, 9"
   },
   {
-    nome: "Maoyuu Maou Yuusha",
+    nome: "Maoyu",
     nota: 0.0,
     imdb: 7.1,
     dublado: false,
@@ -743,7 +743,7 @@ const animes = [
     genre: "2, 8"
   },
   {
-    nome: "Grisaia no Kajitsu",
+    nome: "The Fruit of Grisaia",
     nota: 0.0,
     imdb: 7.5,
     dublado: false,
@@ -785,7 +785,7 @@ const animes = [
     genre: "5, 7, 9"
   },
   {
-    nome: "Kono Sekai wa Fukanzen Sugiru",
+    nome: "Quality Assurance in Another World",
     nota: 0.0,
     imdb: 6.4,
     dublado: true,
