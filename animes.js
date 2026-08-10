@@ -501,7 +501,7 @@ const animes = [
     brutal: false,
     eps: "0/14", 
     img: "https://m.media-amazon.com/images/M/MV5BMzIyZDNmMmUtMGZkNC00MTJjLTlmYzUtODllYWM5NDQ4YTJjXkEyXkFqcGc@._V1_.jpg",
-    desc: "TEMPORARIAMENTE DESCLASSIFICADO POIS É UM SPIN-OFF E PRECISO VER OS PRINCIPAIS PRIMEIRO PRA ENTENDER A lORE",
+    desc: "TEMPORARIAMENTE DESCLASSIFICADO POIS É UM SPIN-OFF E PRECISO VER OS PRINCIPAIS PRIMEIRO PRA ENTENDER A LORE",
     genre: "2, 7"
   },
   {
@@ -534,16 +534,16 @@ const animes = [
   },
   {
     nome: "Life with an Ordinary Guy Who Reincarnated into a Total Fantasy Knockout",
-    nota: 0.0,
+    nota: 5.5,
     imdb: 7.2,
     dublado: false,
-    finalizado: false,
+    finalizado: true,
     emLancamento: false,
     dropado: false,
     brutal: false,
-    eps: "0/12", 
+    eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BZjAwMGM4NzAtNzMxNi00NGExLWE5MmItOGMzNWJhODI0MTcxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???",
+    desc: "É um anime BEM abaixo da média. A parte do isekai é simplesmente ruim, e dos combates nem se fala, já que o personagem tem poder infinito. O outro protagonista é completamente inútil e burro, só serve pra atrapalhar, e infelizmente o humor, que era pra ser o principal, não é tão engraçado.",
     genre: "1, 4, 5, 7"
   },
   {
