@@ -183,11 +183,11 @@ function atualizarEstatisticas() {
     if (anime.brutal) totalBrutais++;
     if (anime.dropado) totalDropados++;
 
-    if (anime.nota > 0) {
+   if (anime.nota > 0 && !anime.dropado) {
       somaNotas += anime.nota;
       animesComNota++;
-    }
-
+   }
+    
     let epsAssistidos = 0;
     if (anime.eps && anime.eps.includes("/")) {
       epsAssistidos = parseInt(anime.eps.split("/")[0]) || 0;
