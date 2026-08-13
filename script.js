@@ -180,7 +180,7 @@ if (temTemporadas || temFilmes) {
         ${anime.temporadas.map(temp => `
           <div class="nota-item">
             <span>${temp.nome}</span>
-            <strong>${Number.isFinite(Number(temp.nota)) && temp.nota !== "" ? Number(temp.nota).toFixed(1) : "-.-"}</strong>
+            <strong>${temp.nota != null && Number(temp.nota) > 0 ? Number(temp.nota).toFixed(1) : "-.-"}</strong>
           </div>
         `).join("")}
 
@@ -199,7 +199,7 @@ if (temTemporadas || temFilmes) {
         ${anime.filmesNotas.map(filme => `
           <div class="nota-item">
             <span>${filme.nome}</span>
-            <strong>${Number.isFinite(Number(filme.nota)) && filme.nota !== "" ? Number(filme.nota).toFixed(1) : "-.-"}</strong>
+            <strong>${filme.nota != null && Number(filme.nota) > 0 ? Number(filme.nota).toFixed(1) : "-.-"}</strong>
           </div>
         `).join("")}
 
