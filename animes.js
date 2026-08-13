@@ -491,16 +491,16 @@ const animes = [
     genre: "1, 3, 4, 8",
 
     temporadas: [
-      { nome: "1ª Temporada", nota: null },
-      { nome: "2ª Temporada", nota: null },
-      { nome: "3ª Temporada", nota: null },
+      { nome: "1ª Temporada", nota: 7.8 },
+      { nome: "2ª Temporada", nota: 8.0 },
+      { nome: "3ª Temporada", nota: 7.0 },
       { nome: "4ª Temporada", nota: null },
       { nome: "5ª Temporada", nota: null }
     ],
 
     filmesNotas: [
-      { nome: "Date A Bullet: Dead or Bullet & Nightmare or Queen", nota: null },
-      { nome: "Date a Live Mayuri Judgement", nota: null }
+      { nome: "Date A Bullet: Dead or Bullet & Nightmare or Queen", nota: 7.0 },
+      { nome: "Date a Live Mayuri Judgement", nota: 7.0 }
     ]
   },
   {
