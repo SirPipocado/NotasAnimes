@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Minha Lista de Animes</title>
+
+<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+<h1>📺 Minha Lista de Animes</h1>
+
+<div class="toolbar">
+  <input type="text" id="search" placeholder="Pesquisar anime...">
+  
+  <select id="filtroGenero">
+    <option value="">Todos os Gêneros</option>
+    <option value="1">Romance</option>
+    <option value="2">Ação</option>
+    <option value="3">Ecchi</option>
+    <option value="4">Comédia</option>
+    <option value="5">Isekai</option>
+    <option value="6">Drama</option>
+    <option value="7">Fantasia</option>
+    <option value="8">Sci-Fi</option>
+    <option value="9">Slice of Life</option>
+    <option value="10">Shounen</option>
+  </select>
+
+  <select id="tipoOrdem">
+    <option value="padrao">Ordem: Padrão</option>
+    <option value="nome">Ordem: Nome (A-Z)</option>
+    <option value="nota">Ordem: Maior Nota</option>
+    <option value="imdb">Ordem: Maior Nota IMDB</option>
+  </select>
+
+  <button id="ordem">⬆️ Crescente</button>
+</div>
+
+<div class="container"></div>
+
+<div class="info-popup-wrapper">
+  <div class="info-popout">
+    <strong>📊 Estatísticas do Catálogo:</strong>
+    <div id="estatisticasGerais" style="margin: 5px 0 15px 0; font-size: 13px; line-height: 1.4; color: #cbd5e1;"></div>
+    <hr style="border: 0; border-top: 1px solid #334155; margin-bottom: 10px;">
+    <strong>Aviso Importante:</strong><br>
+    Todos os animes do catálogo foram escolhidos por recomendação ou por cortes no YouTube/Instagram, então não sou responsável por qualquer anime esquisito 🙂. Além disso, todas as notas e análises são exclusivamente pessoais. Eu posso não ter gostado de algum anime que você goste, mas isso não é ruim! É uma oportunidade! Converse comigo, mostre seus pontos de vista, ficaria feliz em bater um papo sobre! 🍷🗿 (Notas do IMDB pegas dia 31/05/26)
+  </div>
+  <div class="info-btn">!</div>
+</div>
+
+<div class="modal-overlay" id="animeModal">
+  <div class="modal-content" id="modalContent">
+    <button class="btn-fechar" onclick="fecharModal()">✕</button>
+    <div class="modal-header" id="modalHeader"></div>
+    <div class="modal-body">
+      <div class="modal-title" id="modalTitle">Nome do Anime</div>
+      <div class="modal-grid-info" id="modalGridInfo"></div>
+      <div class="modal-review-title">✍️Minha Análise:</div>
+      <div class="modal-desc" id="modalDesc">Descrição aqui...</div>
+    </div>
+  </div>
+</div>
+
+<script src="./animes.js"></script>
+<script src="./script.js"></script>
+  
+
+</body>
+</html>
