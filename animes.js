@@ -561,16 +561,16 @@ const animes = [
   },
   {
     nome: "Love, Chunibyo & Other Delusions!",
-    nota: null,
+    nota: 9.0,
     imdb: 7.4,
     dublado: false,
-    finalizado: false,
+    finalizado: true,
     emLancamento: false,
     dropado: false,
-    brutal: false,
-    eps: "0/24",
+    brutal: true,
+    eps: "24/24",
     img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSShTomQV1X0sILvFNZ4Hbkeo4xlbCYAZprTQ0P7yJmztjLfcII",
-    desc: "???",
+    desc: "Obviamente o melhor anime de romance que eu já assisti. O drama dele não é aquela coisa forçada, você entende o porquê dela ser assim, e o relacionamento dos dois é criado de um jeito incrível, nada rushado ou forçado, tudo no tempo dela. O filme também é incrível. É o único anime de romance que eu realmente gostei de verdade. (Pena que é muito chato de achar os episódios porque é antigo 😔) (E a nota dele no IMDb é a maior injustiça que eu já vi.)",
     genre: "1, 4, 9",
 
     temporadas: [
@@ -579,7 +579,7 @@ const animes = [
     ],
 
     filmesNotas: [
-      { nome: "Take on Me", nota: null }
+      { nome: "Take on Me", nota: 9.0 }
     ]
   },
   {
