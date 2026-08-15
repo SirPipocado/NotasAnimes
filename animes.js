@@ -141,7 +141,7 @@ const animes = [
   },
   {
     nome: "Horimiya",
-    nota: 3.5,
+    nota: 4.0,
     imdb: 8.0,
     dublado: true,
     finalizado: false,
@@ -150,7 +150,7 @@ const animes = [
     brutal: false,
     eps: "13/26", 
     img: "https://m.media-amazon.com/images/M/MV5BNGFjM2M0MTYtM2IxMi00MWQ0LWIyNTYtMGE0YzAyMjA1N2ZhXkEyXkFqcGc@._V1_.jpg",
-    desc: "Romance não é um gênero de que eu gosto, e o anime é puro romance adolescente, melação e história mexicana, e piora na segunda temporada que para o foco nos protagonistas e foca nos NPCs.",
+    desc: "Vamos lá, o começo é legal, principalmente a comédia entre os dois. Porém, o ponto que mais me pega é a velocidade: o romance é completamente rushado e, depois disso, vira pura melação o resto do tempo. Também tem umas novelas mexicanas com os personagens secundários que são bem chatas e só servem pra deixar algumas partes insuportáveis de assistir.",
     genre: "1, 9"
   },
   {
@@ -494,7 +494,7 @@ const animes = [
       { nome: "1ª Temporada", nota: 7.8 },
       { nome: "2ª Temporada", nota: 8.0 },
       { nome: "3ª Temporada", nota: 7.0 },
-      { nome: "4ª Temporada", nota: null },
+      { nome: "4ª Temporada", nota: 7.0 },
       { nome: "5ª Temporada", nota: null }
     ],
 
@@ -575,7 +575,7 @@ const animes = [
 
     temporadas: [
       { nome: "1ª Temporada", nota: 9.0 },
-      { nome: "2ª Temporada", nota: null }
+      { nome: "2ª Temporada", nota: 8.5 }
     ],
 
     filmesNotas: [
