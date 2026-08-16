@@ -608,7 +608,12 @@ const animes = [
     eps: "0/23",
     img: "https://m.media-amazon.com/images/M/MV5BZTAyNjY5MzAtYWMyNy00MWIyLTk2M2MtYzFhYTYwOWRlNjg0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "???",
-    genre: "2, 3, 4"
+    genre: "2, 3, 4",
+
+    temporadas: [
+      { nome: "1ª Temporada", nota: null },
+      { nome: "2ª Temporada", nota: null }
+    ]
   },
   {
     nome: "Kämpfer",
