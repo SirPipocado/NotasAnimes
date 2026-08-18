@@ -52,8 +52,8 @@ if (ordenacaoSelecionada === "nome") {
   resultado.sort((a, b) => b.nota - a.nota);
 } else if (ordenacaoSelecionada === "imdb") {
   resultado.sort((a, b) => b.imdb - a.imdb);
-} else if (ordenacaoSelecionada === "myAnimeList") {
-  resultado.sort((a, b) => b.myAnimeList - a.myAnimeList);
+} else if (ordenacaoSelecionada === "MyAnimeList") {
+  resultado.sort((a, b) => b.MyAnimeList - a.MyAnimeList);
 }
 
 if (!ordemCrescente) {
@@ -135,7 +135,7 @@ document.getElementById("modalGridInfo").innerHTML = `
     <div>⭐ Minha Nota: ${anime.nota > 0 ? anime.nota.toFixed(1) : "-.-"}</div>
     <div>⭐ Nota IMDB: ${anime.imdb > 0 ? anime.imdb.toFixed(1) : "-.-"}</div>
     <div>🎙️ Áudio: ${anime.dublado ? "Dublado" : "Legendado"}</div>
-    <div>⭐ Nota MyAnimeList: ${anime.myAnimeList > 0 ? anime.myAnimeList.toFixed(2) : "-.-"}</div>
+    <div>⭐ Nota MyAnimeList: ${anime.MyAnimeList > 0 ? anime.MyAnimeList.toFixed(2) : "-.-"}</div>
     
     <div class="progress-container">
       <div class="progress-labels">
