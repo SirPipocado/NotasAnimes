@@ -52,6 +52,8 @@ if (ordenacaoSelecionada === "nome") {
   resultado.sort((a, b) => b.nota - a.nota);
 } else if (ordenacaoSelecionada === "imdb") {
   resultado.sort((a, b) => b.imdb - a.imdb);
+} else if (ordenacaoSelecionada === "myAnimeList") {
+  resultado.sort((a, b) => b.myAnimeList - a.myAnimeList);
 }
 
 if (!ordemCrescente) {
