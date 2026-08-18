@@ -478,16 +478,16 @@ const animes = [
   },
   {
     nome: "Date A Live",
-    nota: null,
+    nota: 7.8,
     imdb: 6.9,
     dublado: true,
-    finalizado: false,
-    emLancamento: true,
+    finalizado: true,
+    emLancamento: false,
     dropado: false,
     brutal: false,
-    eps: "0/58", 
+    eps: "58/58", 
     img: "https://m.media-amazon.com/images/M/MV5BM2I5OGRiZWMtYjk1NS00ZGZiLWJiYTktMGJjMGRiNDhlNzI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???",
+    desc: "O anime definitivamente é bom, só tem alguns problemas que eu realmente acho que fazem a nota cair um pouco. Eu sinto que ele se ''estendeu'' demais, são 5 temporadas e a história só é realmente explicada na quinta, e não existem dicas reais durante as outras temporadas, então da a impressão que ficaram enchendo linguiça por bastante tempo. Mas a última temporada, onde realmente mostram tudo, tem uma direção e uma arte bem legais. No geral é bom, só poderia ser mais curto. Acho que, se fosse, a nota poderia até ser maior.",
     genre: "1, 3, 4, 8",
 
     temporadas: [
@@ -495,7 +495,7 @@ const animes = [
       { nome: "2ª Temporada", nota: 8.0 },
       { nome: "3ª Temporada", nota: 7.0 },
       { nome: "4ª Temporada", nota: 7.0 },
-      { nome: "5ª Temporada", nota: null }
+      { nome: "5ª Temporada", nota: 8.5 }
     ],
 
     filmesNotas: [
@@ -701,17 +701,23 @@ const animes = [
   },
   {
     nome: "Uzaki-chan wa Asobitai!",
-    nota: null,
+    nota: 7.1,
     imdb: 6.8,
     dublado: true,
-    finalizado: false,
+    finalizado: true,
     emLancamento: false,
     dropado: false,
     brutal: false,
-    eps: "0/25",
+    eps: "25/25",
     img: "https://m.media-amazon.com/images/M/MV5BMDQyOTc5NWUtODRmOC00NDUwLWIwOTMtNDBlZTBlOTY3YjA3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???",
-    genre: "1, 4, 9"
+    desc: "Meu DEUS, que anime enrolado. Na parte do romance é ruim, completamente genérico e clichê, na comédia é tanto faz n fede nem cheira, o romance é previsivel e irritante. A melhor coisa do anime é literalmente a dublagem, que é incrível e foi o que conseguiu me segurar até o final, porque o anime em si é bem zoadinho. (OBS. A nota é mais pela dublagem do que pelo anime em si.",
+    genre: "1, 4, 9",
+
+    
+    temporadas: [
+      { nome: "1ª Temporada", nota: 7.2 },
+      { nome: "2ª Temporada", nota: 7.0 }
+    ]
   },
   {
     nome: "Maoyu",
@@ -729,16 +735,16 @@ const animes = [
   },
   {
     nome: "A Journey Through Another World: Raising Kids While Adventuring",
-    nota: null,
+    nota: 7.7,
     imdb: 6.7,
     dublado: true,
-    finalizado: false,
+    finalizado: true,
     emLancamento: false,
     dropado: false,
     brutal: false,
-    eps: "0/12",
+    eps: "12/12",
     img: "https://m.media-amazon.com/images/M/MV5BNjhjMTYyMDMtMmRjOS00MTYwLTgzMTktNGVhOTZiYjBmOWRmXkEyXkFqcGc@._V1_.jpg",
-    desc: "???",
+    desc: "Isekai/10 É um Isekai até que legal pra passar o tempo. O protagonista é 200% genérico e overpower, mas as crianças dão um toque a mais de fofura. Ele é totalmente slice of life, mas não chega a ser enrolado. Definitivamente bom pra passar o tempo, e eu não consigo pensar em nenhum ponto realmente negativo.",
     genre: "5, 7, 9"
   },
   {
