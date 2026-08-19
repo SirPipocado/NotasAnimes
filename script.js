@@ -9,14 +9,14 @@ function renderizar(lista) {
     <div class="card ${anime.dropado ? "dropado" : ""} ${anime.brutal ? "brutal" : ""}" onclick="abrirModal('${anime.nome.replace(/'/g, "\\'")}')">
       ${anime.dropado ? `<div class="drop-label">DROPADO</div>` : ""}
       ${anime.brutal ? `<div class="brutal-label">BRUTAL</div>` : ""}
-      ${anime.emEspera ? `<div class="espera-label">⏸ EM ESPERA</div>` : ""}
+      ${anime.emEspera ? `<div class="espera-label">⏸️ EM ESPERA</div>` : ""}
       <img class="banner" src="${anime.img}">
       <div class="content">
         <div class="title">${anime.nome}</div>
         <div class="info">
           <div>
             ${anime.emEspera
-              ? `<span class="nota-espera">⏸ Em espera</span>`
+              ? `<span class="nota-espera">⏸️ Em espera</span>`
                : `⭐ ${anime.nota > 0 ? anime.nota.toFixed(1) : "-.-"}`
             }
           </div>
@@ -141,7 +141,7 @@ document.getElementById("modalGridInfo").innerHTML = `
     <div>
       ⭐ Minha Nota:
       ${anime.emEspera
-        ? `<span class="nota-espera">⏸ Em espera</span>`
+        ? `<span class="nota-espera">⏸️ Em espera</span>`
         : anime.nota > 0 ? anime.nota.toFixed(1) : "-.-"
       }
     </div>
