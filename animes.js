@@ -334,7 +334,7 @@ const animes = [
     nota: null,
     imdb: 8.6,
     MyAnimeList: 8.8,
-    dublado: false,
+    dublado: true,
     finalizado: false,
     emLancamento: false,
     emEspera: true,
