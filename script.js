@@ -261,42 +261,67 @@ if (animeModalEl) {
 
 function atualizarEstatisticas() {
   const totalAnimes = animes.length;
+
   let assistidos = 0;
   let pendentes = 0;
+  let naoAssistidos = 0;
+  let emEspera = 0;
+
   let totalBrutais = 0;
   let totalDropados = 0;
+
   let somaNotas = 0;
   let animesComNota = 0;
 
   animes.forEach(anime => {
+
     if (anime.brutal) totalBrutais++;
     if (anime.dropado) totalDropados++;
 
-   if (anime.nota > 0 && !anime.dropado) {
+    if (anime.nota > 0 && !anime.dropado && !anime.emEspera) {
       somaNotas += anime.nota;
       animesComNota++;
-   }
-    
+    }
+
     let epsAssistidos = 0;
+
     if (anime.eps && anime.eps.includes("/")) {
       epsAssistidos = parseInt(anime.eps.split("/")[0]) || 0;
     }
 
-    if (anime.finalizado || epsAssistidos > 0) {
+    if (anime.dropado) return;
+
+    if (anime.emEspera) {
+      emEspera++;
+    }
+
+    else if (anime.finalizado) {
       assistidos++;
-    } else if (!anime.dropado) {
+    }
+
+    else if (epsAssistidos > 0) {
       pendentes++;
+    }
+
+    else {
+      naoAssistidos++;
     }
   });
 
-  const notaMedia = animesComNota > 0 ? (somaNotas / animesComNota).toFixed(1) : "-.-";
+  const notaMedia =
+    animesComNota > 0
+      ? (somaNotas / animesComNota).toFixed(1)
+      : "-.-";
 
   const divEst = document.getElementById("estatisticasGerais");
+
   if (divEst) {
     divEst.innerHTML = `
       📺 Total de Animes: <strong>${totalAnimes}</strong><br>
       ✅ Assistidos: <strong>${assistidos}</strong><br>
       ⏳ Pendentes: <strong>${pendentes}</strong><br>
+      🆕 Não Assistidos: <strong>${naoAssistidos}</strong><br>
+      ⏸️ Em Espera: <strong>${emEspera}</strong><br>
       ⭐ Nota Média: <strong>${notaMedia}</strong><br>
       🔥 Brutais: <strong>${totalBrutais}</strong> | ❌ Dropados: <strong>${totalDropados}</strong>
     `;
