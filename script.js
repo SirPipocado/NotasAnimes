@@ -9,13 +9,19 @@ function renderizar(lista) {
     <div class="card ${anime.dropado ? "dropado" : ""} ${anime.brutal ? "brutal" : ""}" onclick="abrirModal('${anime.nome.replace(/'/g, "\\'")}')">
       ${anime.dropado ? `<div class="drop-label">DROPADO</div>` : ""}
       ${anime.brutal ? `<div class="brutal-label">BRUTAL</div>` : ""}
+      ${anime.emEspera ? `<div class="espera-label">⏸ EM ESPERA</div>` : ""}
       <img class="banner" src="${anime.img}">
       <div class="content">
         <div class="title">${anime.nome}</div>
         <div class="info">
-          <div>⭐ ${anime.nota > 0 ? anime.nota.toFixed(1) : "-.-"}</div>
+          <div>
+            ${anime.emEspera
+              ? `<span class="nota-espera">⏸ Em espera</span>`
+               : `⭐ ${anime.nota > 0 ? anime.nota.toFixed(1) : "-.-"}`
+            }
+          </div>
           <div>🎙️ ${anime.dublado ? "Dublado" : "Legendado"}</div>
-          <div>📺 ${anime.finalizado ? "Finalizado" : anime.emLancamento ? "Em lançamento" : "Não finalizado"}</div>
+          <div>📺 ${anime.emEspera ? "Em espera" : anime.finalizado ? "Finalizado" : anime.emLancamento ? "Em lançamento" : "Não finalizado"}</div>
           <div>📊 Eps: ${anime.emLancamento ? anime.eps.split("/")[0] + "/?" : anime.eps}</div>
         </div>
         <div class="desc">${anime.desc}</div>
@@ -132,7 +138,13 @@ function abrirModal(nomeAnime) {
   }
 
 document.getElementById("modalGridInfo").innerHTML = `
-    <div>⭐ Minha Nota: ${anime.nota > 0 ? anime.nota.toFixed(1) : "-.-"}</div>
+    <div>
+      ⭐ Minha Nota:
+      ${anime.emEspera
+        ? `<span class="nota-espera">⏸ Em espera</span>`
+        : anime.nota > 0 ? anime.nota.toFixed(1) : "-.-"
+      }
+    </div>
     <div>⭐ Nota IMDB: ${anime.imdb > 0 ? anime.imdb.toFixed(1) : "-.-"}</div>
     <div>🎙️ Áudio: ${anime.dublado ? "Dublado" : "Legendado"}</div>
     <div>⭐ Nota MyAnimeList: ${anime.MyAnimeList > 0 ? anime.MyAnimeList.toFixed(1) : "-.-"}</div>
@@ -230,6 +242,7 @@ if (temTemporadas || temFilmes) {
   content.classList.remove("brutal-border", "dropado-border"); 
   if (anime.brutal) content.classList.add("brutal-border");
   if (anime.dropado) content.classList.add("dropado-border");
+  if (anime.emEspera) content.classList.add("espera-border");
 
   modal.classList.add("active");
 }
