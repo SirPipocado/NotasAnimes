@@ -102,7 +102,7 @@ const animes = [
     eps: "47/47", 
     img: "https://m.media-amazon.com/images/M/MV5BZjBkYmRiOTAtY2IwOS00ZWU3LTk3YjItNjMzYWZiMDE1MjcyXkEyXkFqcGc@._V1_.jpg",
     desc: "Ideia legal, final legal, lore legal e Plots legais, pena que tem tantos episódios desnecessários que não dá vontade nenhuma de assistir.",
-    genre: "4, 8, 10"
+    genre: "2, 4, 8, 10"
   },
   {
     nome: "The Greatest Demon Lord Is Reborn as a Typical Nobody",
@@ -117,7 +117,7 @@ const animes = [
     eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BZTE0ZmQ0ZmYtYjllZS00MDg0LTk3YzMtYzBhMDk4ZjUzNzAyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Isekai/10 Não tem nada de especial, mas não é ruim.",
-    genre: "5, 7"
+    genre: "7"
   },
   {
     nome: "Miss Kobayashi's Dragon Maid",
@@ -162,7 +162,7 @@ const animes = [
     eps: "13/26", 
     img: "https://m.media-amazon.com/images/M/MV5BNGFjM2M0MTYtM2IxMi00MWQ0LWIyNTYtMGE0YzAyMjA1N2ZhXkEyXkFqcGc@._V1_.jpg",
     desc: "Vamos lá, o começo é legal, principalmente a comédia entre os dois. Porém, o ponto que mais me pega é a velocidade: o romance é completamente rushado e, depois disso, vira pura melação o resto do tempo. Também tem umas novelas mexicanas com os personagens secundários que são bem chatas e só servem pra deixar algumas partes insuportáveis de assistir.",
-    genre: "1, 9"
+    genre: "1, 4, 9"
   },
   {
     nome: "The Weakest Tamer Began a Journey to Pick Up Trash",
@@ -234,7 +234,7 @@ const animes = [
     emLancamento: true,
     dropado: false,
     brutal: true,
-    eps: "72/72", 
+    eps: "72/96", 
     img: "https://m.media-amazon.com/images/M/MV5BOTczMjM3MDUtYmZjMC00YzZhLWE4ODQtNjg5YWU4NTJjNzY2XkEyXkFqcGc@._V1_.jpg",
     desc: "Segundo melhor isekai que já assisti, muito interessante a ideia, o único defeito é a falta de consequências, mas tirando isso, é muito bom!",
     genre: "2, 5, 7, 10"
@@ -463,7 +463,7 @@ const animes = [
     eps: "24/24", 
     img: "https://m.media-amazon.com/images/M/MV5BZGMzZDY0MDUtYzY5OS00NmI0LTlhZmUtZGM2NjVjNjdiNThlXkEyXkFqcGc@._V1_.jpg",
     desc: "Anime MUITO bom, a ideia é boa, a comédia é boa, o romance é no ponto certo, sem acelerar nem focar totalmente, o que é perfeito, e eu não fiquei enjoado vendo, o que é difícil para um Slice of life para mim. (obs. a comi é muito fofa)",
-    genre: "4, 9"
+    genre: "1, 4, 9"
   },
   {
     nome: "Blend S",
@@ -508,7 +508,7 @@ const animes = [
     eps: "13/13", 
     img: "https://m.media-amazon.com/images/M/MV5BZGU4OTdkNjctNTYyYS00M2U4LWE4YjEtZjYzMzVhNmRjYzUzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Isekai/10 Não foge muito de um isekai normal, porém tem algumas partes que me agradaram mais, como o antigo grupo continuar aparecendo na história, ao invés de simplesmente deixar de existir. Dá um ar de que o mundo não gira só em volta do personagem, mas, de resto, ainda é um isekai bem padrão.",
-    genre: "5, 7"
+    genre: "7"
   },
   {
     nome: "Date A Live",
@@ -567,7 +567,7 @@ const animes = [
     eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BNDYxZmY2ZmItZGViMS00ZTUyLWFjOWEtY2UzZDI2NzZhZDc4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Isekai/10 É boa a ideia do personagem que simplesmente não consegue lutar, mas é bom em todo o resto. Isso leva a história para um lado mais legal, sem cair naquele isekai genérico em que o personagem é SUPER FORTE e derrota todo mundo. Mesmo assim, no geral, ainda não foge tanto do isekai genérico.",
-    genre: "5, 7"
+    genre: "2, 7, 10"
   },
   {
     nome: "Chainsaw Man",
@@ -582,7 +582,7 @@ const animes = [
     eps: "0/12", 
     img: "https://m.media-amazon.com/images/M/MV5BZGY2ZTM2MWMtNzA2OS00ZjJlLWIwZTMtMDBhN2EwYjZjZjEyXkEyXkFqcGc@._V1_.jpg",
     desc: "???",
-    genre: "2, 3, 10"
+    genre: "2, 7, 10"
   },
   {
     nome: "Life with an Ordinary Guy Who Reincarnated into a Total Fantasy Knockout",
@@ -671,7 +671,7 @@ const animes = [
     eps: "0/14",
     img: "https://m.media-amazon.com/images/M/MV5BNTQzNGYzNTItNTIzNS00YjQzLTg1ZTctY2M0MDdkZDYwODU2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "???",
-    genre: "2, 3, 4, 8"
+    genre: "1, 2, 3, 4"
   },
   {
     nome: "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You",
@@ -698,7 +698,7 @@ const animes = [
     emLancamento: true,
     dropado: false,
     brutal: false,
-    eps: "0/12",
+    eps: "12/24",
     img: "https://m.media-amazon.com/images/M/MV5BMzE3OTk2YmQtZmQ2NS00ZGFjLTlkOWItNmExNjExMWYwOTFhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "???",
     genre: "4, 5, 7"
@@ -819,7 +819,7 @@ const animes = [
     nota: null,
     imdb: 8.2,
     MyAnimeList: 8.2,
-    dublado: false,
+    dublado: true,
     finalizado: false,
     emLancamento: false,
     dropado: false,
