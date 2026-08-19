@@ -342,7 +342,7 @@ const animes = [
     brutal: false,
     eps: "0/48", 
     img: "https://m.media-amazon.com/images/M/MV5BNjAxMmFjZjgtYjM1ZS00NzdmLTliZDktZmIyMzU5YTBlNDBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???",
+    desc: "QUERO LER O MANGÁ ANTES :P",
     genre: "6"
   },
   {
