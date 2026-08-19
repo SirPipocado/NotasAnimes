@@ -88,7 +88,17 @@ const bibliotecaGeneros = {
   7: "Fantasia",
   8: "Sci-Fi",
   9: "Slice of Life",
-  10: "Shonen"
+  10: "Shonen",
+  11: "Aventura",
+  12: "Sobrenatural",
+  13: "Mistério",
+  14: "Psicológico",
+  15: "Harem",
+  16: "Terror",
+  17: "Mecha",
+  18: "Esportes",
+  19: "Música",
+  20: "Escolar"
 };
 
 function abrirModal(nomeAnime) {
