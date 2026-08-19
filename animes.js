@@ -799,17 +799,17 @@ const animes = [
   },
   {
     nome: "Back Street Girls: Gokudols",
-    nota: null,
+    nota: 7.0,
     imdb: 6.6,
     MyAnimeList: 7.0,
     dublado: true,
-    finalizado: false,
+    finalizado: true,
     emLancamento: false,
     dropado: false,
     brutal: false,
-    eps: "0/10",
+    eps: "10/10",
     img: "https://m.media-amazon.com/images/M/MV5BMjRiZWMzYWQtMDI2NC00OGE2LThkOGMtNDNiYWQ0ZjA2ZmFhXkEyXkFqcGc@._V1_.jpg",
-    desc: "???",
+    desc: "Vou falar a real, o anime é engraçadinho... e só. Ele é feio que dói e tem praticamente zero história, mas esse nem é o problema, porque acho que esse era realmente o foco. Porém, a comédia, que deveria sustentar a falta de todo o resto, simplesmente não é marcante. É um anime de 10 episódios com algumas piadinhas e acabou. Sinto que ele é completamente esquecível e, pra um anime em que a comédia deveria ser 100% o pilar, isso fica um pouco zoado.",
     genre: "4, 9"
   },
   {
