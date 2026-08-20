@@ -12,7 +12,7 @@ const animes = [
     eps: "12/24",
     img: "https://m.media-amazon.com/images/M/MV5BYmJhYjgzYTQtMzMxYi00NTkyLWI2MWItNTgxNjk1NzU0YmQzXkEyXkFqcGc@._V1_.jpg",
     desc: "Bem legal, ele consegue colocar romance sem deixar meloso, trazendo um tema que fica legal de acompanhar, e tem bastante ecchi.",
-    genre: "1, 4, 9"
+    genre: "1, 4, 9, 20"
   },
   {
     nome: "Demon Slayer",
@@ -27,7 +27,7 @@ const animes = [
     eps: "63/63", 
     img: "https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Você pensa que é um vídeo da vida real até ver o Tanjiro kkk, no geral é bem legal e bonito, e segue bem a receita básica de shōnen, o que é bom",
-    genre: "2, 7, 10"
+    genre: "2, 7, 10, 11, 12"
   },
   {
     nome: "Dandadan",
@@ -42,7 +42,7 @@ const animes = [
     eps: "24/24", 
     img: "https://m.media-amazon.com/images/M/MV5BYWFhOWMxNTYtZThiMi00ZmQ5LTlmODktN2QwNzUyZjMyZGQzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Muita informação xD. Tirando a brincadeira, é realmente um anime confuso no começo, porque ele joga muita coisa na sua cara do nada, mas dps ele fica MUITO bom e divertido. Obs.: tem um humor bem quinta série kk",
-    genre: "1, 2, 4"
+    genre: "1, 2, 4, 12"
   },
   {
     nome: "Frieren: Beyond Journey's End",
@@ -57,7 +57,7 @@ const animes = [
     eps: "28/38", 
     img: "https://m.media-amazon.com/images/M/MV5BZTI4ZGMxN2UtODlkYS00MTBjLWE1YzctYzc3NDViMGI0ZmJmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Ele consegue alternar entre tranquilidade e ação sem dificuldades, o universo é muito bem construído e pensado.",
-    genre: "6, 7, 9"
+    genre: "6, 7, 9, 11"
   },
   {
     nome: "Fullmetal Alchemist: Brotherhood",
@@ -72,7 +72,7 @@ const animes = [
     eps: "64/64", 
     img: "https://m.media-amazon.com/images/M/MV5BMzNiODA5NjYtYWExZS00OTc4LTg3N2ItYWYwYTUyYmM5MWViXkEyXkFqcGc@._V1_QL75_UY281_CR6,0,190,281_.jpg",
     desc: "Ele começa bem, o meio é ótimo, e o final é perfeito.",
-    genre: "2, 7, 10"
+    genre: "2, 7, 10, 11"
   },
   {
     nome: "Fire Force",
@@ -87,7 +87,7 @@ const animes = [
     eps: "73/73", 
     img: "https://m.media-amazon.com/images/M/MV5BMThhODExMTUtZmIyMC00OTY4LTk5YWMtN2YxYWRhNmNiNDNmXkEyXkFqcGc@._V1_.jpg",
     desc: "Enrola muito e tem brigas que começam sem motivo e terminam sem um porquê, mas as lutas são bem bonitas e é engraçado. Devo admitir que eles sabem fazer um bom gancho pro próximo episódio, então é difícil não querer continuar assistindo. Porém, no final, começa a ficar BEM viajado, e o desfecho é BEM anticlimático.",
-    genre: "2, 8, 10"
+    genre: "2, 8, 10, 12"
   },
   {
     nome: "Assassination Classroom",
@@ -102,7 +102,7 @@ const animes = [
     eps: "47/47", 
     img: "https://m.media-amazon.com/images/M/MV5BZjBkYmRiOTAtY2IwOS00ZWU3LTk3YjItNjMzYWZiMDE1MjcyXkEyXkFqcGc@._V1_.jpg",
     desc: "Ideia legal, final legal, lore legal e Plots legais, pena que tem tantos episódios desnecessários que não dá vontade nenhuma de assistir.",
-    genre: "2, 4, 8, 10"
+    genre: "2, 4, 8, 10, 12, 20"
   },
   {
     nome: "The Greatest Demon Lord Is Reborn as a Typical Nobody",
@@ -117,7 +117,7 @@ const animes = [
     eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BZTE0ZmQ0ZmYtYjllZS00MDg0LTk3YzMtYzBhMDk4ZjUzNzAyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Isekai/10 Não tem nada de especial, mas não é ruim.",
-    genre: "7"
+    genre: "7, 15, 20"
   },
   {
     nome: "Miss Kobayashi's Dragon Maid",
@@ -162,7 +162,7 @@ const animes = [
     eps: "13/26", 
     img: "https://m.media-amazon.com/images/M/MV5BNGFjM2M0MTYtM2IxMi00MWQ0LWIyNTYtMGE0YzAyMjA1N2ZhXkEyXkFqcGc@._V1_.jpg",
     desc: "Vamos lá, o começo é legal, principalmente a comédia entre os dois. Porém, o ponto que mais me pega é a velocidade: o romance é completamente rushado e, depois disso, vira pura melação o resto do tempo. Também tem umas novelas mexicanas com os personagens secundários que são bem chatas e só servem pra deixar algumas partes insuportáveis de assistir.",
-    genre: "1, 4, 9"
+    genre: "1, 4, 9, 20"
   },
   {
     nome: "The Weakest Tamer Began a Journey to Pick Up Trash",
@@ -177,7 +177,7 @@ const animes = [
     eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BMGFiNzEwNTAtNGQ4Ni00YWZmLWFmNjEtNmZjOGNhMWFhYzgwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Um Isekai Be Like, porém acho que por conta da protagonista ser criança, você se apega mais a personagem e torce para tudo dar certo com ela.",
-    genre: "5, 7, 9"
+    genre: "5, 7, 9, 11"
   },
   {
     nome: "KonoSuba: God's Blessing on This Wonderful World!",
@@ -192,7 +192,7 @@ const animes = [
     eps: "31/31", 
     img: "https://m.media-amazon.com/images/M/MV5BNTQ5NzJjMjgtNDliNC00YTdmLWJiOTQtYWRiMzY4OWU5NGQ3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Melhor Isekai que já assisti, paródia de Isekai com Ecchi, BRUTAL.",
-    genre: "3, 4, 5, 7"
+    genre: "3, 4, 5, 7, 11"
   },
   {
     nome: "My Unique Skill Makes Me OP Even at Level 1",
@@ -207,7 +207,7 @@ const animes = [
     eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BOTM4YWQzNGEtZTBiZi00NGIyLWE2NDQtMjcyYzM4NWFmN2Q2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Isekai/10 Eu Inhamo a Cenoura do Level Baixo.",
-    genre: "4, 5, 7"
+    genre: "4, 5, 7, 11, 15"
   },
   {
     nome: "I Got a Cheat Skill in Another World and Became Unrivaled in The Real World, Too",
@@ -222,7 +222,7 @@ const animes = [
     eps: "13/13", 
     img: "https://m.media-amazon.com/images/M/MV5BZWExYjA3OTAtYzliNC00MWMzLWI1NmYtYWY0MDRhNGIyN2IwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Isekai/10 Bem legal o estilo artístico trocando entre os mundos. A história é de isekai, não tem como fugir.",
-    genre: "2, 5, 7"
+    genre: "2, 5, 7, 11, 15, 20"
   },
   {
     nome: "That Time I Got Reincarnated as a Slime",
@@ -234,10 +234,10 @@ const animes = [
     emLancamento: true,
     dropado: false,
     brutal: true,
-    eps: "72/96", 
+    eps: "72/96",
     img: "https://m.media-amazon.com/images/M/MV5BOTczMjM3MDUtYmZjMC00YzZhLWE4ODQtNjg5YWU4NTJjNzY2XkEyXkFqcGc@._V1_.jpg",
     desc: "Segundo melhor isekai que já assisti, muito interessante a ideia, o único defeito é a falta de consequências, mas tirando isso, é muito bom!",
-    genre: "2, 5, 7, 10"
+    genre: "2, 5, 7, 10, 11"
   },
   {
     nome: "The Unwanted Undead Adventurer",
@@ -252,7 +252,7 @@ const animes = [
     eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BZTJlMzc5NTgtN2U3Ny00ZGE3LTlkMGQtYTA2ZTg1NThhZjIwXkEyXkFqcGc@._V1_.jpg",
     desc: "Bom, tem uma ideia legal, pena que acaba muito cedo, com MUITAS pontas soltas e MUITAS coisas sem explicação.",
-    genre: "2, 7"
+    genre: "2, 7, 11"
   },
   {
     nome: "Kaguya-sama: Love Is War",
@@ -267,7 +267,7 @@ const animes = [
     eps: "43/43", 
     img: "https://m.media-amazon.com/images/M/MV5BMTM1ZWViNWMtZWY2ZC00YmYyLTk1ZGEtMzRjOWI2YTM1OTI3XkEyXkFqcGc@._V1_.jpg",
     desc: "As duas primeiras temporadas são MUITO boas, conseguem misturar romance com comédia de uma maneira espetacular, porém... da terceira temporada para a frente começa a focar muito mais no romance, o que já me perde um pouco. (obs. Da terceira temporada para a frente, o anime tem MUITAS indiretas/diretas de sexo, o que não me agrada tanto).",
-    genre: "1, 4, 9"
+    genre: "1, 4, 9, 14, 20"
   },
   {
     nome: "Tomo-chan Is a Girl!",
@@ -282,7 +282,7 @@ const animes = [
     eps: "13/13", 
     img: "https://m.media-amazon.com/images/M/MV5BMzQxMzg3N2EtN2MzNC00ZTg0LWJhNGYtZWU2Y2RlZTg1MGNlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "É engraçadinho, é romance mas não achei ruim, principalmente porque tem poucos episódios e um final aceitável.",
-    genre: "1, 4, 9"
+    genre: "1, 4, 9, 20"
   },
   {
     nome: "Sword Art Online",
@@ -297,7 +297,7 @@ const animes = [
     eps: "25/96", 
     img: "https://m.media-amazon.com/images/M/MV5BN2NhYzU2NDEtYzI1NS00MjgzLThjZGUtOTYxNGJkZjZmNDdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Ideia boa, Isekai Be Like e as ações tem peso relativamente, porém tem um desequilíbrio nas lutas e cenas EXTREMAMENTE desconfortáveis.",
-    genre: "2, 5, 7, 8"
+    genre: "2, 5, 7, 8, 11, 15"
   },
   {
     nome: "Neon Genesis Evangelion",
@@ -312,7 +312,7 @@ const animes = [
     eps: "26/26", 
     img: "https://m.media-amazon.com/images/M/MV5BZjZjZGI3ZDQtODNmZC00NjE0LTlmYTUtOTljMWI2YjNmMTQ0XkEyXkFqcGc@._V1_.jpg",
     desc: "Superestimado, começa legal mas da metade pra frente escaralha tudo. É um anime que dá sono, principalmente nas partes finais onde não acontece nada, e eu não vou assistir vídeo pra entender a LORE.",
-    genre: "6, 8"
+    genre: "6, 8, 13, 14, 17"
   },
   {
     nome: "Dr. Stone",
@@ -327,7 +327,7 @@ const animes = [
     eps: "95/95", 
     img: "https://m.media-amazon.com/images/M/MV5BYzZkYjM1MWMtNTY3Mi00MTMzLTlhNmQtN2ExZjFkYzdjZmFjXkEyXkFqcGc@._V1_.jpg",
     desc: "Bom anime. A 1ª temporada é BRUTAL, porem da segunda pra frente continua legal mas exagera um pouco nas criações e o final poderia ser levemente mais ''REALISTA'' mas é um anime realmente bom!",
-    genre: "4, 8, 10"
+    genre: "4, 8, 10, 11"
   },
   {
     nome: "The Apothecary Diaries",
@@ -343,7 +343,7 @@ const animes = [
     eps: "0/48", 
     img: "https://m.media-amazon.com/images/M/MV5BNjAxMmFjZjgtYjM1ZS00NzdmLTliZDktZmIyMzU5YTBlNDBmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "QUERO LER O MANGÁ ANTES :P",
-    genre: "6"
+    genre: "6, 13"
   },
   {
     nome: "ONIMAI: I'm Now Your Sister!",
@@ -358,10 +358,11 @@ const animes = [
     eps: "1/12", 
     img: "https://m.media-amazon.com/images/M/MV5BYWY4Yzk4M2ItNGMxMi00YWM3LWFlNzAtMzZiNWM5Y2FlNDllXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Olha, esse anime não é destinado pro meu nicho; e eu não veria nem se me pagassem. É um negócio esquisito demais. Eu não vou nem dar nota pra isso.",
-    genre: "4, 9"
+    genre: "4, 9, 20"
   },
   {
     nome: "KonoSuba: An Explosion on This Wonderful World!",
+    nomeOriginal: "KonoSuba: An Explosion on This Wonderful World!",
     nota: 9.0,
     imdb: 7.0,
     MyAnimeList: 7.5,
@@ -373,7 +374,7 @@ const animes = [
     eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BYTRiM2VmNjgtZWY5ZS00YTIxLWJhMjAtY2UzYTk3NzM5ZTM2XkEyXkFqcGc@._V1_.jpg",
     desc: "Spin-off brutal! Diferente de Konosuba, o foco não é comédia, mas a história da Megumin é sensacional. E ver o trio principal ao fundo das cenas é foda demais. Nostalgia absurda.",
-    genre: "4, 5, 7"
+    genre: "4, 5, 7, 11, 20"
   },
   {
     nome: "Akashic Records of Bastard Magic Instructor",
@@ -388,7 +389,7 @@ const animes = [
     eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BODgwMGJkZWEtNzFjMS00OTlkLTg0MjMtMTY5NmFjZmUwMjJjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Maior decepção até agora. O anime é BOM D+ Mas deixou MUITA coisa sem explicar e preparou TUDO pra 2ª temporada… que nunca vai vir. JÁ FAZ 7 ANOS DO LANÇAMENTO DESSA DESGRAÇA!",
-    genre: "3, 4, 7"
+    genre: "3, 4, 7, 20"
   },
   {
     nome: "Hell's Paradise",
@@ -403,7 +404,7 @@ const animes = [
     eps: "25/25", 
     img: "https://m.media-amazon.com/images/M/MV5BZjhmMjhkNjUtMGU2MC00N2IzLTg1YzItZDk5ODMxMDYxODc0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Ótimo anime. O estilo artístico é incrível e as batalhas são extremamente bonitas. Uma pena que a história ainda não foi finalizada.",
-    genre: "2, 7, 10"
+    genre: "2, 7, 10, 11, 12, 13, 16"
   },
   {
     nome: "My Love Story with Yamada-kun at Lv999",
@@ -433,7 +434,7 @@ const animes = [
     eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BMmQ2NTkwNDQtZmMwMi00MTZhLWJjNzgtOWUzMGU2MDU3MDI5XkEyXkFqcGc@._V1_.jpg",
     desc: "Tinha tudo para ser bom, mas o ''objetivo'' final foi chato e acabou sem mais nem menos, triste.",
-    genre: "5, 7"
+    genre: "5, 7, 11"
   },
   {
     nome: "Jujutsu Kaisen",
@@ -448,7 +449,7 @@ const animes = [
     eps: "59/59", 
     img: "https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_.jpg",
     desc: "No geral, é legal, e as lutas são bem bonitas. Porém, tem muitos problemas além dos comuns de shōnen, e o anime tem MUITAS cenas de massacre o que não me agrada muito.",
-    genre: "2, 7, 10"
+    genre: "2, 7, 10, 12"
   },
   {
     nome: "komi can't communicate",
@@ -463,7 +464,7 @@ const animes = [
     eps: "24/24", 
     img: "https://m.media-amazon.com/images/M/MV5BZGMzZDY0MDUtYzY5OS00NmI0LTlhZmUtZGM2NjVjNjdiNThlXkEyXkFqcGc@._V1_.jpg",
     desc: "Anime MUITO bom, a ideia é boa, a comédia é boa, o romance é no ponto certo, sem acelerar nem focar totalmente, o que é perfeito, e eu não fiquei enjoado vendo, o que é difícil para um Slice of life para mim. (obs. a comi é muito fofa)",
-    genre: "1, 4, 9"
+    genre: "1, 4, 9, 20"
   },
   {
     nome: "Blend S",
@@ -493,7 +494,7 @@ const animes = [
     eps: "112/112", 
     img: "https://m.media-amazon.com/images/M/MV5BNWJmODlhODItZTZmYi00ZGNjLTk1NmYtMjE5M2IwYjI2MzI2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Um clássico atemporal. Mesmo hoje em dia, ele consegue criar uma narrativa legal que te faz pensar sobre a vida no primeiro episódio. O único problema dele é que pega a receita que dá certo e replica várias vezes, mas não deixa de ser bom por conta disso. Recomendo!",
-    genre: "2, 10"
+    genre: "2, 10, 11, 12"
   },
   {
     nome: "Beast Tamer",
@@ -508,7 +509,7 @@ const animes = [
     eps: "13/13", 
     img: "https://m.media-amazon.com/images/M/MV5BZGU4OTdkNjctNTYyYS00M2U4LWE4YjEtZjYzMzVhNmRjYzUzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Isekai/10 Não foge muito de um isekai normal, porém tem algumas partes que me agradaram mais, como o antigo grupo continuar aparecendo na história, ao invés de simplesmente deixar de existir. Dá um ar de que o mundo não gira só em volta do personagem, mas, de resto, ainda é um isekai bem padrão.",
-    genre: "7"
+    genre: "7, 11, 15"
   },
   {
     nome: "Date A Live",
@@ -523,7 +524,7 @@ const animes = [
     eps: "58/58", 
     img: "https://m.media-amazon.com/images/M/MV5BM2I5OGRiZWMtYjk1NS00ZGZiLWJiYTktMGJjMGRiNDhlNzI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "O anime definitivamente é bom, só tem alguns problemas que eu realmente acho que fazem a nota cair um pouco. Eu sinto que ele se ''estendeu'' demais, são 5 temporadas e a história só é realmente explicada na quinta, e não existem dicas reais durante as outras temporadas, então da a impressão que ficaram enchendo linguiça por bastante tempo. Mas a última temporada, onde realmente mostram tudo, tem uma direção e uma arte bem legais. No geral é bom, só poderia ser mais curto. Acho que, se fosse, a nota poderia até ser maior.",
-    genre: "1, 3, 4, 8",
+    genre: "1, 3, 4, 8, 15, 17, 20",
 
     temporadas: [
       { nome: "1ª Temporada", nota: 7.8 },
@@ -552,7 +553,7 @@ const animes = [
     eps: "0/14", 
     img: "https://m.media-amazon.com/images/M/MV5BMzIyZDNmMmUtMGZkNC00MTJjLTlmYzUtODllYWM5NDQ4YTJjXkEyXkFqcGc@._V1_.jpg",
     desc: "TEMPORARIAMENTE DESCLASSIFICADO POIS É UM SPIN-OFF E PRECISO VER OS PRINCIPAIS PRIMEIRO PRA ENTENDER A LORE",
-    genre: "2, 7"
+    genre: "2, 7, 11, 12, 13"
   },
   {
     nome: "The Unaware Atelier Meister",
@@ -567,7 +568,7 @@ const animes = [
     eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BNDYxZmY2ZmItZGViMS00ZTUyLWFjOWEtY2UzZDI2NzZhZDc4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Isekai/10 É boa a ideia do personagem que simplesmente não consegue lutar, mas é bom em todo o resto. Isso leva a história para um lado mais legal, sem cair naquele isekai genérico em que o personagem é SUPER FORTE e derrota todo mundo. Mesmo assim, no geral, ainda não foge tanto do isekai genérico.",
-    genre: "2, 7, 10"
+    genre: "2, 7, 10, 11"
   },
   {
     nome: "Chainsaw Man",
@@ -582,7 +583,7 @@ const animes = [
     eps: "0/12", 
     img: "https://m.media-amazon.com/images/M/MV5BZGY2ZTM2MWMtNzA2OS00ZjJlLWIwZTMtMDBhN2EwYjZjZjEyXkEyXkFqcGc@._V1_.jpg",
     desc: "???",
-    genre: "2, 7, 10"
+    genre: "2, 7, 10, 12, 16"
   },
   {
     nome: "Life with an Ordinary Guy Who Reincarnated into a Total Fantasy Knockout",
@@ -597,7 +598,7 @@ const animes = [
     eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BZjAwMGM4NzAtNzMxNi00NGExLWE5MmItOGMzNWJhODI0MTcxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "É um anime BEM abaixo da média. A parte do isekai é simplesmente ruim, e dos combates nem se fala, já que o personagem tem poder infinito. O outro protagonista é completamente inútil e burro, só serve pra atrapalhar, e infelizmente o humor, que era pra ser o principal, não é tão engraçado.",
-    genre: "1, 4, 5, 7"
+    genre: "1, 4, 5, 7, 11"
   },
   {
     nome: "Love, Chunibyo & Other Delusions!",
@@ -612,7 +613,7 @@ const animes = [
     eps: "24/24",
     img: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSShTomQV1X0sILvFNZ4Hbkeo4xlbCYAZprTQ0P7yJmztjLfcII",
     desc: "Obviamente o melhor anime de romance que eu já assisti. O drama dele não é aquela coisa forçada, você entende o porquê dela ser assim, e o relacionamento dos dois é criado de um jeito incrível, nada rushado ou forçado, tudo no tempo dela. O filme também é incrível. É o único anime de romance que eu realmente gostei de verdade. (Pena que é muito chato de achar os episódios porque é antigo 😔) (E a nota dele no IMDb é a maior injustiça que eu já vi.)",
-    genre: "1, 4, 9",
+    genre: "1, 4, 9, 20",
 
     temporadas: [
       { nome: "1ª Temporada", nota: 9.0 },
@@ -636,7 +637,7 @@ const animes = [
     eps: "13/13",
     img: "https://m.media-amazon.com/images/M/MV5BZWIwMmUwZGUtNTJiNy00Y2M1LTgxYjItODdhYTc3OGUxMGNkXkEyXkFqcGc@._V1_.jpg",
     desc: "Um bom anime, meio confuso, bem dramático e meio triste. Sinto que tem bastante coisa por trás que eu não entendi e que não é fácil de entender, e ele acaba de um jeito legal. Recomendo.",
-    genre: "6, 8"
+    genre: "6, 8, 13, 14"
   },
   {
     nome: "Maken-ki!",
@@ -651,7 +652,7 @@ const animes = [
     eps: "0/23",
     img: "https://m.media-amazon.com/images/M/MV5BZTAyNjY5MzAtYWMyNy00MWIyLTk2M2MtYzFhYTYwOWRlNjg0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "???",
-    genre: "2, 3, 4",
+    genre: "2, 3, 4, 15, 20",
 
     temporadas: [
       { nome: "1ª Temporada", nota: null },
@@ -671,7 +672,7 @@ const animes = [
     eps: "0/14",
     img: "https://m.media-amazon.com/images/M/MV5BNTQzNGYzNTItNTIzNS00YjQzLTg1ZTctY2M0MDdkZDYwODU2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "???",
-    genre: "1, 2, 3, 4"
+    genre: "1, 2, 3, 4, 15, 20"
   },
   {
     nome: "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You",
@@ -686,7 +687,7 @@ const animes = [
     eps: "24/36",
     img: "https://m.media-amazon.com/images/M/MV5BMTc5MTE3MTktN2MwYy00M2UwLTlhMzEtNDE5YjBmMTUzMGRkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Que anime incrível!!! É bizarro como ele consegue misturar uma comédia boa com drama e romance. As quebras da quarta parede são bizarramente engraçadas, e é loucura como o anime consegue dar atenção para TODAS as personagens, mesmo sendo tantas. Muito bom, recomendo muito!!!(Obs.: Tem muito ecchi, até demais.)",
-    genre: "1, 3, 4"
+    genre: "1, 3, 4, 15, 20"
   },
   {
     nome: "Trapped in a Dating Sim: The World of Otome Games Is Tough for Mobs",
@@ -701,7 +702,7 @@ const animes = [
     eps: "12/24",
     img: "https://m.media-amazon.com/images/M/MV5BMzE3OTk2YmQtZmQ2NS00ZGFjLTlkOWItNmExNjExMWYwOTFhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "???",
-    genre: "4, 5, 7"
+    genre: "4, 5, 7, 15, 17, 20"
   },
   {
     nome: "Tenpuru",
@@ -716,7 +717,7 @@ const animes = [
     eps: "0/13",
     img: "https://m.media-amazon.com/images/M/MV5BMzhiODBjNWQtNzI1Ny00YmY4LTlmYjItMjk0M2Y3MTNiYjUzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "???",
-    genre: "1, 3, 4"
+    genre: "1, 3, 4, 15, 20"
   },
   {
     nome: "Dungeon Meshi",
@@ -731,7 +732,7 @@ const animes = [
     eps: "0/24",
     img: "https://m.media-amazon.com/images/M/MV5BNjRiNzI1MTYtZDg0Mi00NWFiLTg1MWItNjNkMmM5NjU3MWEyXkEyXkFqcGc@._V1_.jpg",
     desc: "???",
-    genre: "4, 7"
+    genre: "4, 7, 11"
   },
   {
     nome: "BOFURI: I Don't Want to Get Hurt, so I'll Max Out My Defense.",
@@ -746,7 +747,7 @@ const animes = [
     eps: "0/24",
     img: "https://m.media-amazon.com/images/M/MV5BYzNlMWNkN2MtNmJjZi00YjcxLTgwMjEtNjhlODc1Yjg2NGM4XkEyXkFqcGc@._V1_.jpg",
     desc: "???",
-    genre: "2, 4, 7"
+    genre: "2, 4, 7, 11"
   },
   {
     nome: "Uzaki-chan wa Asobitai!",
@@ -763,7 +764,6 @@ const animes = [
     desc: "Meu DEUS, que anime enrolado. Na parte do romance é ruim, completamente genérico e clichê, na comédia é tanto faz n fede nem cheira, o romance é previsivel e irritante. A melhor coisa do anime é literalmente a dublagem, que é incrível e foi o que conseguiu me segurar até o final, porque o anime em si é bem zoadinho. (OBS. A nota é mais pela dublagem do que pelo anime em si.",
     genre: "1, 4, 9",
 
-    
     temporadas: [
       { nome: "1ª Temporada", nota: 7.2 },
       { nome: "2ª Temporada", nota: 7.0 }
@@ -782,7 +782,7 @@ const animes = [
     eps: "0/12",
     img: "https://m.media-amazon.com/images/M/MV5BMmY4ZDk3NDktOWMxNS00M2QzLWFhYjMtN2E1ZTVmMDQ5NjIwXkEyXkFqcGc@._V1_.jpg",
     desc: "???",
-    genre: "1, 7"
+    genre: "1, 7, 11"
   },
   {
     nome: "A Journey Through Another World: Raising Kids While Adventuring",
@@ -797,7 +797,7 @@ const animes = [
     eps: "12/12",
     img: "https://m.media-amazon.com/images/M/MV5BNjhjMTYyMDMtMmRjOS00MTYwLTgzMTktNGVhOTZiYjBmOWRmXkEyXkFqcGc@._V1_.jpg",
     desc: "Isekai/10 É um Isekai até que legal pra passar o tempo. O protagonista é 200% genérico e overpower, mas as crianças dão um toque a mais de fofura. Ele é totalmente slice of life, mas não chega a ser enrolado. Definitivamente bom pra passar o tempo, e eu não consigo pensar em nenhum ponto realmente negativo.",
-    genre: "5, 7, 9"
+    genre: "5, 7, 9, 11"
   },
   {
     nome: "Back Street Girls: Gokudols",
@@ -812,7 +812,7 @@ const animes = [
     eps: "10/10",
     img: "https://m.media-amazon.com/images/M/MV5BMjRiZWMzYWQtMDI2NC00OGE2LThkOGMtNDNiYWQ0ZjA2ZmFhXkEyXkFqcGc@._V1_.jpg",
     desc: "Vou falar a real, o anime é engraçadinho... e só. Ele é feio que dói e tem praticamente zero história, mas esse nem é o problema, porque acho que esse era realmente o foco. Porém, a comédia, que deveria sustentar a falta de todo o resto, simplesmente não é marcante. É um anime de 10 episódios com algumas piadinhas e acabou. Sinto que ele é completamente esquecível e, pra um anime em que a comédia deveria ser 100% o pilar, isso fica um pouco zoado.",
-    genre: "4, 9"
+    genre: "4, 9, 19"
   },
   {
     nome: "Trigun",
@@ -827,7 +827,7 @@ const animes = [
     eps: "0/26",
     img: "https://m.media-amazon.com/images/M/MV5BNjVjZDE0MzEtN2Q1Mi00YjgyLWE0NTMtMWJiNDA5MGRmMmM2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "???",
-    genre: "2, 8"
+    genre: "2, 8, 11"
   },
   {
     nome: "The Fruit of Grisaia",
@@ -842,7 +842,7 @@ const animes = [
     eps: "0/24",
     img: "https://m.media-amazon.com/images/M/MV5BYmI2ODI1OTAtMzU4YS00NDUyLWI2MGEtNzQ1NmIxZTk1NDhmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "???",
-    genre: "1, 3, 6"
+    genre: "1, 3, 6, 14"
   },
   {
     nome: "Murenase! Seton Gakuen",
@@ -857,7 +857,7 @@ const animes = [
     eps: "0/12",
     img: "https://m.media-amazon.com/images/M/MV5BNDdjMGJlOWItYWUyZC00MDI1LWIwM2EtODk4M2NhYjg3MDI5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "???",
-    genre: "4, 9"
+    genre: "4, 9, 20"
   },
   {
     nome: "Farming Life in Another World",
@@ -887,7 +887,7 @@ const animes = [
     eps: "0/13",
     img: "https://m.media-amazon.com/images/M/MV5BMTc2MGM2M2EtZGIzNS00ODdhLWJhOWMtZGM1N2I3ZTQ3ZWNkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "???",
-    genre: "2, 5, 7"
+    genre: "2, 5, 7, 11"
   },
   {
     nome: "Uma Musume: Pretty Derby",
@@ -902,7 +902,7 @@ const animes = [
     eps: "0/39",
     img: "https://m.media-amazon.com/images/M/MV5BYTNjOThhZTEtMmQzOC00NmZiLWFiYmItODJlNDM2YTQ4ZTYzXkEyXkFqcGc@._V1_.jpg",
     desc: "???",
-    genre: "4, 9"
+    genre: "4, 9, 18, 19"
   },
   {
     nome: "The Case Study of Vanitas",
@@ -917,7 +917,7 @@ const animes = [
     eps: "0/24",
     img: "https://m.media-amazon.com/images/M/MV5BMzYwMmI1YWMtOTc0My00OGI3LWI3ZDctZmMwYjczYzcxMjI4XkEyXkFqcGc@._V1_.jpg",
     desc: "???",
-    genre: "2, 7"
+    genre: "2, 7, 12, 13"
   },
   {
     nome: "The Fragrant Flower Blooms with Dignity",
@@ -932,6 +932,6 @@ const animes = [
     eps: "0/13",
     img: "https://m.media-amazon.com/images/M/MV5BY2Q0NTNlMTAtZGVkYS00NDU1LThjYzYtZDQ3M2U5NGJiNzhkXkEyXkFqcGc@._V1_.jpg",
     desc: "???",
-    genre: "1, 4, 6, 9, 10"
+    genre: "1, 4, 6, 9, 10, 20"
   }
 ];
