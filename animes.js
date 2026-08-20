@@ -237,7 +237,7 @@ const animes = [
     eps: "72/96",
     img: "https://m.media-amazon.com/images/M/MV5BOTczMjM3MDUtYmZjMC00YzZhLWE4ODQtNjg5YWU4NTJjNzY2XkEyXkFqcGc@._V1_.jpg",
     desc: "Segundo melhor isekai que já assisti, muito interessante a ideia, o único defeito é a falta de consequências, mas tirando isso, é muito bom!",
-    genre: "2, 5, 7, 10, 11"
+    genre: "2, 5, 7, 11"
   },
   {
     nome: "The Unwanted Undead Adventurer",
@@ -568,7 +568,7 @@ const animes = [
     eps: "12/12", 
     img: "https://m.media-amazon.com/images/M/MV5BNDYxZmY2ZmItZGViMS00ZTUyLWFjOWEtY2UzZDI2NzZhZDc4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "Isekai/10 É boa a ideia do personagem que simplesmente não consegue lutar, mas é bom em todo o resto. Isso leva a história para um lado mais legal, sem cair naquele isekai genérico em que o personagem é SUPER FORTE e derrota todo mundo. Mesmo assim, no geral, ainda não foge tanto do isekai genérico.",
-    genre: "2, 7, 10, 11"
+    genre: "2, 7, 11"
   },
   {
     nome: "Chainsaw Man",
@@ -932,6 +932,6 @@ const animes = [
     eps: "0/13",
     img: "https://m.media-amazon.com/images/M/MV5BY2Q0NTNlMTAtZGVkYS00NDU1LThjYzYtZDQ3M2U5NGJiNzhkXkEyXkFqcGc@._V1_.jpg",
     desc: "???",
-    genre: "1, 4, 6, 9, 10, 20"
+    genre: "1, 4, 6, 9, 20"
   }
 ];
