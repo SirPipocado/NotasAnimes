@@ -14,38 +14,211 @@
 
 <div class="toolbar">
   <input type="text" id="search" placeholder="Pesquisar anime...">
-  
-  <select id="filtroGenero">
-    <option value="">Todos os Gêneros</option>
-    <option value="1">Romance</option>
-    <option value="2">Ação</option>
-    <option value="3">Ecchi</option>
-    <option value="4">Comédia</option>
-    <option value="5">Isekai</option>
-    <option value="6">Drama</option>
-    <option value="7">Fantasia</option>
-    <option value="8">Sci-Fi</option>
-    <option value="9">Slice of Life</option>
-    <option value="10">Shounen</option>
-    <option value="11">Aventura</option>
-    <option value="12">Sobrenatural</option>
-    <option value="13">Mistério</option>
-    <option value="14">Psicológico</option>
-    <option value="15">Harem</option>
-    <option value="16">Terror</option>
-    <option value="17">Mecha</option>
-    <option value="18">Esportes</option>
-    <option value="19">Musica</option>
-    <option value="20">Escolar</option>
-  </select>
 
-  <select id="tipoOrdem">
-    <option value="padrao">Ordem: Padrão</option>
-    <option value="nome">Ordem: Nome (A-Z)</option>
-    <option value="nota">Ordem: Maior Nota</option>
-    <option value="imdb">Ordem: Maior Nota IMDB</option>
-    <option value="MyAnimeList">Ordem: Maior Nota My Anime List</option>  
-  </select>
+  <!-- FILTRO DE GÊNEROS -->
+  <div class="custom-dropdown genre-dropdown" id="genreDropdown">
+
+    <button type="button" class="dropdown-trigger" id="genreTrigger">
+      <span id="genreTriggerText">Todos os Gêneros</span>
+      <span class="dropdown-arrow">⌄</span>
+    </button>
+
+    <div class="dropdown-panel genre-panel" id="genrePanel">
+
+      <div class="genre-panel-title">Selecionar gêneros</div>
+
+      <div class="genre-grid">
+
+        <label class="genre-option">
+          <input type="checkbox" value="1">
+          <span>Romance</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="2">
+          <span>Ação</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="3">
+          <span>Ecchi</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="4">
+          <span>Comédia</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="5">
+          <span>Isekai</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="6">
+          <span>Drama</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="7">
+          <span>Fantasia</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="8">
+          <span>Sci-Fi</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="9">
+          <span>Slice of Life</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="10">
+          <span>Shounen</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="11">
+          <span>Aventura</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="12">
+          <span>Sobrenatural</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="13">
+          <span>Mistério</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="14">
+          <span>Psicológico</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="15">
+          <span>Harem</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="16">
+          <span>Terror</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="17">
+          <span>Mecha</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="18">
+          <span>Esportes</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="19">
+          <span>Música</span>
+        </label>
+
+        <label class="genre-option">
+          <input type="checkbox" value="20">
+          <span>Escolar</span>
+        </label>
+
+      </div>
+
+      <div class="genre-footer">
+
+        <div class="genre-mode">
+          <span class="genre-mode-title">Combinação:</span>
+
+          <label>
+            <input
+              type="radio"
+              name="genreMode"
+              value="all"
+              checked
+            >
+            Todos
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="genreMode"
+              value="any"
+            >
+            Qualquer um
+          </label>
+        </div>
+
+        <button type="button" id="clearGenres" class="clear-genres">
+          Limpar
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ORDEM -->
+  <div class="custom-dropdown order-dropdown" id="orderDropdown">
+
+    <button type="button" class="dropdown-trigger" id="orderTrigger">
+      <span id="orderTriggerText">Ordem: Padrão</span>
+      <span class="dropdown-arrow">⌄</span>
+    </button>
+
+    <div class="dropdown-panel order-panel" id="orderPanel">
+
+      <button
+        type="button"
+        class="order-option active"
+        data-value="padrao"
+      >
+        Ordem: Padrão
+      </button>
+
+      <button
+        type="button"
+        class="order-option"
+        data-value="nome"
+      >
+        Ordem: Nome (A-Z)
+      </button>
+
+      <button
+        type="button"
+        class="order-option"
+        data-value="nota"
+      >
+        Ordem: Maior Nota
+      </button>
+
+      <button
+        type="button"
+        class="order-option"
+        data-value="imdb"
+      >
+        Ordem: Maior Nota IMDB
+      </button>
+
+      <button
+        type="button"
+        class="order-option"
+        data-value="myAnimeList"
+      >
+        Ordem: Maior Nota My Anime List
+      </button>
+
+    </div>
+  </div>
+
 
   <button id="ordem">⬆️ Crescente</button>
 </div>
