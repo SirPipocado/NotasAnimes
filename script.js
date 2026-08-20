@@ -2,81 +2,447 @@ const container = document.querySelector(".container");
 const inputBusca = document.getElementById("search");
 const btnOrdem = document.getElementById("ordem");
 
+
+const genreDropdown =
+  document.getElementById("genreDropdown");
+
+const genreTrigger =
+  document.getElementById("genreTrigger");
+
+const genreTriggerText =
+  document.getElementById("genreTriggerText");
+
+const genreCheckboxes = [
+  ...document.querySelectorAll(
+    ".genre-option input[type='checkbox']"
+  )
+];
+
+const genreModeRadios = [
+  ...document.querySelectorAll(
+    'input[name="genreMode"]'
+  )
+];
+
+const clearGenres =
+  document.getElementById("clearGenres");
+
+
+const orderDropdown =
+  document.getElementById("orderDropdown");
+
+const orderTrigger =
+  document.getElementById("orderTrigger");
+
+const orderTriggerText =
+  document.getElementById("orderTriggerText");
+
+const orderOptions = [
+  ...document.querySelectorAll(".order-option")
+];
+
+
 let ordemCrescente = true;
+let ordenacaoSelecionada = "padrao";
+
 
 function renderizar(lista) {
+
   const html = lista.map(anime => `
-    <div class="card ${anime.dropado ? "dropado" : ""} ${anime.brutal ? "brutal" : ""}" onclick="abrirModal('${anime.nome.replace(/'/g, "\\'")}')">
-      ${anime.dropado ? `<div class="drop-label">DROPADO</div>` : ""}
-      ${anime.brutal ? `<div class="brutal-label">BRUTAL</div>` : ""}
-      ${anime.emEspera ? `<div class="espera-label">⏸️ EM ESPERA</div>` : ""}
+    <div
+      class="card
+        ${anime.dropado ? "dropado" : ""}
+        ${anime.brutal ? "brutal" : ""}"
+      onclick="abrirModal('${anime.nome.replace(/'/g, "\\'")}')"
+    >
+
+      ${
+        anime.dropado
+          ? `<div class="drop-label">DROPADO</div>`
+          : ""
+      }
+
+      ${
+        anime.brutal
+          ? `<div class="brutal-label">BRUTAL</div>`
+          : ""
+      }
+
+      ${
+        anime.emEspera
+          ? `<div class="espera-label">⏸️ EM ESPERA</div>`
+          : ""
+      }
+
       <img class="banner" src="${anime.img}">
+
       <div class="content">
-        <div class="title">${anime.nome}</div>
+
+        <div class="title">
+          ${anime.nome}
+        </div>
+
         <div class="info">
+
           <div>
-            ${anime.emEspera
-              ? `<span class="nota-espera">⏸️ Em espera</span>`
-               : `⭐ ${anime.nota > 0 ? anime.nota.toFixed(1) : "-.-"}`
+            ${
+              anime.emEspera
+                ? `<span class="nota-espera">
+                     ⏸️ Em espera
+                   </span>`
+                : `⭐ ${
+                    anime.nota > 0
+                      ? anime.nota.toFixed(1)
+                      : "-.-"
+                  }`
             }
           </div>
-          <div>🎙️ ${anime.dublado ? "Dublado" : "Legendado"}</div>
-          <div>📺 ${anime.emEspera ? "Em espera" : anime.finalizado ? "Finalizado" : anime.emLancamento ? "Em lançamento" : "Não finalizado"}</div>
-          <div>📊 Eps: ${anime.emLancamento ? anime.eps.split("/")[0] + "/?" : anime.eps}</div>
+
+          <div>
+            🎙️ ${anime.dublado
+              ? "Dublado"
+              : "Legendado"}
+          </div>
+
+          <div>
+            📺 ${
+              anime.emEspera
+                ? "Em espera"
+                : anime.finalizado
+                ? "Finalizado"
+                : anime.emLancamento
+                ? "Em lançamento"
+                : "Não finalizado"
+            }
+          </div>
+
+          <div>
+            📊 Eps:
+            ${
+              anime.emLancamento
+                ? anime.eps.split("/")[0] + "/?"
+                : anime.eps
+            }
+          </div>
+
         </div>
-        <div class="desc">${anime.desc}</div>
+
+        <div class="desc">
+          ${anime.desc}
+        </div>
+
       </div>
     </div>
-  `).join('');
+
+  `).join("");
+
   container.innerHTML = html;
 }
 
+
+function atualizarTextoGeneros() {
+
+  const selecionados =
+    genreCheckboxes.filter(
+      checkbox => checkbox.checked
+    );
+
+  if (selecionados.length === 0) {
+
+    genreTriggerText.textContent =
+      "Todos os Gêneros";
+
+    return;
+  }
+
+  if (selecionados.length === 1) {
+
+    const nome =
+      selecionados[0]
+        .closest(".genre-option")
+        .querySelector("span")
+        .textContent;
+
+    genreTriggerText.textContent = nome;
+
+    return;
+  }
+
+  genreTriggerText.textContent =
+    `${selecionados.length} Gêneros`;
+}
+
 function filtrarEOrdenar() {
-  const termo = inputBusca.value.toLowerCase();
-  const generoSelecionado = document.getElementById("filtroGenero").value;
-  const ordenacaoSelecionada = document.getElementById("tipoOrdem").value;
+
+  const termo =
+    inputBusca.value
+      .trim()
+      .toLowerCase();
+
+
+  const generosSelecionados =
+    genreCheckboxes
+
+      .filter(
+        checkbox => checkbox.checked
+      )
+
+      .map(
+        checkbox => checkbox.value
+      );
+
+
+  const modoGenero =
+    document.querySelector(
+      'input[name="genreMode"]:checked'
+    )?.value || "all";
+
 
   let resultado = animes.filter(anime => {
-    const bateNome = anime.nome.toLowerCase().includes(termo);
-    
+
+    const bateNome =
+      anime.nome
+        .toLowerCase()
+        .includes(termo);
+
+
     let bateGenero = true;
-    if (generoSelecionado) {
-      if (anime.genre) {
-        const ids = anime.genre.split(",").map(id => id.trim());
-        bateGenero = ids.includes(generoSelecionado);
-      } else {
+
+
+    if (generosSelecionados.length > 0) {
+
+      if (!anime.genre) {
+
         bateGenero = false;
+
+      } else {
+
+        const idsAnime =
+          anime.genre
+            .split(",")
+            .map(id => id.trim());
+
+
+        if (modoGenero === "all") {
+
+          bateGenero =
+            generosSelecionados.every(
+              genero =>
+                idsAnime.includes(genero)
+            );
+
+        } else {
+
+          bateGenero =
+            generosSelecionados.some(
+              genero =>
+                idsAnime.includes(genero)
+            );
+        }
       }
     }
+
 
     return bateNome && bateGenero;
   });
 
-if (ordenacaoSelecionada === "nome") {
-  resultado.sort((a, b) => a.nome.localeCompare(b.nome));
-} else if (ordenacaoSelecionada === "nota") {
-  resultado.sort((a, b) => b.nota - a.nota);
-} else if (ordenacaoSelecionada === "imdb") {
-  resultado.sort((a, b) => b.imdb - a.imdb);
-} else if (ordenacaoSelecionada === "MyAnimeList") {
-  resultado.sort((a, b) => b.MyAnimeList - a.MyAnimeList);
-}
+  if (ordenacaoSelecionada === "nome") {
 
-if (!ordemCrescente) {
-  resultado.reverse();
-}
+    resultado.sort(
+      (a, b) =>
+        a.nome.localeCompare(b.nome)
+    );
+
+  } else if (
+    ordenacaoSelecionada === "nota"
+  ) {
+
+    resultado.sort(
+      (a, b) =>
+        (b.nota || 0) - (a.nota || 0)
+    );
+
+  } else if (
+    ordenacaoSelecionada === "imdb"
+  ) {
+
+    resultado.sort(
+      (a, b) =>
+        (b.imdb || 0) - (a.imdb || 0)
+    );
+
+  } else if (
+    ordenacaoSelecionada === "myAnimeList"
+  ) {
+
+    resultado.sort(
+      (a, b) =>
+        (b.MyAnimeList || 0) -
+        (a.MyAnimeList || 0)
+    );
+  }
+
+
+  if (!ordemCrescente) {
+    resultado.reverse();
+  }
+
 
   renderizar(resultado);
 }
 
-inputBusca.addEventListener("input", filtrarEOrdenar);
-document.getElementById("filtroGenero").addEventListener("change", filtrarEOrdenar);
-document.getElementById("tipoOrdem").addEventListener("change", filtrarEOrdenar);
-btnOrdem.addEventListener("click", () => {
-  ordemCrescente = !ordemCrescente;
-  btnOrdem.innerText = ordemCrescente ? "⬆️ Crescente" : "⬇️ Decrescente";
-  filtrarEOrdenar();
-});
+inputBusca.addEventListener(
+  "input",
+  filtrarEOrdenar
+);
+
+genreTrigger.addEventListener(
+  "click",
+  () => {
+
+    genreDropdown.classList.toggle("open");
+
+    orderDropdown.classList.remove("open");
+  }
+);
+
+
+genreCheckboxes.forEach(
+  checkbox => {
+
+    checkbox.addEventListener(
+      "change",
+      () => {
+
+        atualizarTextoGeneros();
+
+        filtrarEOrdenar();
+      }
+    );
+  }
+);
+
+
+genreModeRadios.forEach(
+  radio => {
+
+    radio.addEventListener(
+      "change",
+      filtrarEOrdenar
+    );
+  }
+);
+
+
+clearGenres.addEventListener(
+  "click",
+  () => {
+
+    genreCheckboxes.forEach(
+      checkbox => {
+        checkbox.checked = false;
+      }
+    );
+
+    atualizarTextoGeneros();
+
+    filtrarEOrdenar();
+  }
+);
+
+orderTrigger.addEventListener(
+  "click",
+  () => {
+
+    orderDropdown.classList.toggle("open");
+
+    genreDropdown.classList.remove("open");
+  }
+);
+
+
+orderOptions.forEach(
+  option => {
+
+    option.addEventListener(
+      "click",
+      () => {
+
+        ordenacaoSelecionada =
+          option.dataset.value;
+
+
+        orderTriggerText.textContent =
+          option.textContent.trim();
+
+
+        orderOptions.forEach(
+          item =>
+            item.classList.remove("active")
+        );
+
+
+        option.classList.add("active");
+
+
+        orderDropdown.classList.remove("open");
+
+
+        filtrarEOrdenar();
+      }
+    );
+  }
+);
+
+btnOrdem.addEventListener(
+  "click",
+  () => {
+
+    ordemCrescente =
+      !ordemCrescente;
+
+
+    btnOrdem.innerText =
+      ordemCrescente
+        ? "⬆️ Crescente"
+        : "⬇️ Decrescente";
+
+
+    filtrarEOrdenar();
+  }
+);
+
+document.addEventListener(
+  "click",
+  event => {
+
+    if (
+      !genreDropdown.contains(event.target)
+    ) {
+      genreDropdown.classList.remove("open");
+    }
+
+
+    if (
+      !orderDropdown.contains(event.target)
+    ) {
+      orderDropdown.classList.remove("open");
+    }
+  }
+);
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if (event.key === "Escape") {
+
+      genreDropdown.classList.remove("open");
+
+      orderDropdown.classList.remove("open");
+    }
+  }
+);
 
 const bibliotecaGeneros = {
   1: "Romance",
