@@ -641,21 +641,21 @@ const animes = [
   },
   {
     nome: "Maken-ki!",
-    nota: null,
+    nota: 5.0,
     imdb: 5.9,
     MyAnimeList: 6.3,
     dublado: false,
     finalizado: false,
     emLancamento: false,
-    dropado: false,
+    dropado: true,
     brutal: false,
-    eps: "0/23",
+    eps: "13/23",
     img: "https://m.media-amazon.com/images/M/MV5BZTAyNjY5MzAtYWMyNy00MWIyLTk2M2MtYzFhYTYwOWRlNjg0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???",
+    desc: "Um anime com uma nota no IMDb completamente justa. A história é fraca e praticamente não explicam nada, só jogam informações sem desenvolver direito. As cenas de luta até que são legais, pena que duram uns 10 segundos por episódio. Mas o que realmente derruba o anime é a obsessão por fanservice: ele parece um hentai sem sexo. De 5 em 5 segundos aparece peito ou calcinha na tela. Um pouco de fanservice é esperado em um ecchi, mas aqui é tão exagerado e constante que fica cansativo e praticamente impossível de assistir.",
     genre: "2, 3, 4, 15, 20",
 
     temporadas: [
-      { nome: "1ª Temporada", nota: null },
+      { nome: "1ª Temporada", nota: 5.0 },
       { nome: "2ª Temporada", nota: null }
     ]
   },
