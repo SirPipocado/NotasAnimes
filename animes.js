@@ -948,5 +948,25 @@ const animes = [
     img: "https://m.media-amazon.com/images/M/MV5BNDg5NDYwODEtN2ViYi00M2YyLWJhZjUtNjE2NTk0YjdkMTA3XkEyXkFqcGc@._V1_.jpg",
     desc: "???",
     genre: "2, 4, 7, 8, 11"
-  }
+  },
+    {
+    nome: "Mushoku Tensei",
+    nota: null,
+    imdb: 8.2,
+    MyAnimeList: 8.3,
+    dublado: true,
+    finalizado: false,
+    emLancamento: true,
+    dropado: false,
+    brutal: false,
+    eps: "0/62",
+    img: "https://m.media-amazon.com/images/M/MV5BMDRmYmY3NmQtYzgyOC00NzliLWI1MjUtMjNkN2EzNjZlOTY5XkEyXkFqcGc@._V1_.jpg",
+    desc: "???",
+    genre: "1, 2, 3, 5, 6, 7, 11, 15",
+    temporadas: [
+      { nome: "1ª Temporada", nota: null },
+      { nome: "2ª Temporada", nota: null },
+      { nome: "3ª Temporada", nota: null }
+    ]
+  },
 ];
