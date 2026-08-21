@@ -933,5 +933,20 @@ const animes = [
     img: "https://m.media-amazon.com/images/M/MV5BY2Q0NTNlMTAtZGVkYS00NDU1LThjYzYtZDQ3M2U5NGJiNzhkXkEyXkFqcGc@._V1_.jpg",
     desc: "???",
     genre: "1, 4, 6, 9, 20"
+  },
+  {
+    nome: "Combatants Will Be Dispatched!",
+    nota: null,
+    imdb: 6.6,
+    MyAnimeList: 7.1,
+    dublado: true,
+    finalizado: false,
+    emLancamento: false,
+    dropado: false,
+    brutal: false,
+    eps: "0/12",
+    img: "https://m.media-amazon.com/images/M/MV5BNDg5NDYwODEtN2ViYi00M2YyLWJhZjUtNjE2NTk0YjdkMTA3XkEyXkFqcGc@._V1_.jpg",
+    desc: "???",
+    genre: "2, 4, 7, 8, 11"
   }
 ];
