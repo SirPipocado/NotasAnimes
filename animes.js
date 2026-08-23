@@ -26,7 +26,7 @@ const animes = [
     brutal: false,
     eps: "63/63", 
     img: "https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Você pensa que é um vídeo da vida real até ver o Tanjiro kkk, no geral é bem legal e bonito, e segue bem a receita básica de shōnen, o que é bom",
+    desc: "Um bom anime. O começo é bem rushado, ele tenta dar um choque pra te prender de qualquer jeito, tem poucos personagens verdadeiramente memoráveis e a história é shōnen e só, o que, por um lado, pra quem quer só acompanhar alguma coisa é bom, mas pra quem quer uma história complexa e dramática é melhor não esperar muito. E, por último, ele é realmente muito bonito, fora do padrão, mas isso acaba sendo a única coisa verdadeiramente incrível do anime.",
     genre: "2, 7, 10, 11, 12"
   },
   {
@@ -56,7 +56,7 @@ const animes = [
     brutal: true,
     eps: "28/38", 
     img: "https://m.media-amazon.com/images/M/MV5BZTI4ZGMxN2UtODlkYS00MTBjLWE1YzctYzc3NDViMGI0ZmJmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Ele consegue alternar entre tranquilidade e ação sem dificuldades, o universo é muito bem construído e pensado.",
+    desc: "É um anime realmente incrível. A quebra de expectativa do primeiro episódio, o jeito que ele te prende com um objetivo tão aberto e a forma como o cotidiano é feito deixam tudo ainda melhor. Nada é acelerado, tudo é muito lento, tanto que é justamente por isso que muita gente não gosta. Ele não é um anime de ação, mesmo tendo algumas cenas, o foco é na viagem em si e no desenvolvimento dos personagens. E a animação também é impecável, não tão bonita quanto a de Demon Slayer, mas mesmo assim muito bonita.",
     genre: "6, 7, 9, 11"
   },
   {
@@ -71,7 +71,7 @@ const animes = [
     brutal: true,
     eps: "64/64", 
     img: "https://m.media-amazon.com/images/M/MV5BMzNiODA5NjYtYWExZS00OTc4LTg3N2ItYWYwYTUyYmM5MWViXkEyXkFqcGc@._V1_QL75_UY281_CR6,0,190,281_.jpg",
-    desc: "Ele começa bem, o meio é ótimo, e o final é perfeito.",
+    desc: "Uma obra de arte. O começo é bem rushado, fica até parecendo que não é o primeiro episódio, mas, com o passar do tempo, você começa a mergulhar de cabeça na história. Ele gera dúvidas e curiosidades que realmente são explicadas e desenvolvidas, nada fica solto. Você sente a dor dos personagens, o peso das ações deles, e quanto mais assiste, mais imerso fica na história. Os flashbacks realmente acrescentam e não parecem simplesmente jogados. E o final, quando você percebe que tudo está interligado, chega a dar um choque. Você vê que nada foi por nada, nada foi aleatório e tudo tinha um motivo. Chega a arrepiar.",
     genre: "2, 7, 10, 11"
   },
   {
@@ -101,7 +101,7 @@ const animes = [
     brutal: false,
     eps: "47/47", 
     img: "https://m.media-amazon.com/images/M/MV5BZjBkYmRiOTAtY2IwOS00ZWU3LTk3YjItNjMzYWZiMDE1MjcyXkEyXkFqcGc@._V1_.jpg",
-    desc: "Ideia legal, final legal, lore legal e Plots legais, pena que tem tantos episódios desnecessários que não dá vontade nenhuma de assistir.",
+    desc: "Ele começa meio jogado, cuspindo informação sem parar ao ponto de você ficar confuso, mas, com o desenrolar, tudo começa a se explicar e vão aparecendo cada vez mais plots que realmente agregam à obra. O final, esperadamente inesperado, fecha tudo perfeitamente. O único problema é que ele é MUITO lento. São 47 episódios que poderiam ser cortados pela metade mantendo tudo que é realmente interessante e importante. Tem muitos episódios que simplesmente não agregam o suficiente à história ao ponto de realmente precisarem existir. No geral, o anime é bom, mas essa enrolação e o ritmo arrastado são o que fazem a nota cair muito.",
     genre: "2, 4, 8, 10, 12, 20"
   },
   {
@@ -191,7 +191,7 @@ const animes = [
     brutal: true,
     eps: "31/31", 
     img: "https://m.media-amazon.com/images/M/MV5BNTQ5NzJjMjgtNDliNC00YTdmLWJiOTQtYWRiMzY4OWU5NGQ3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Melhor Isekai que já assisti, paródia de Isekai com Ecchi, BRUTAL.",
+    desc: "É um anime INCRÍVEL. Uma paródia de isekai com a comédia no ponto certo, e a completa quebra de expectativa dos personagens é a melhor parte do anime. O desenrolar também prende bastante, mesmo que cada aventura nova quase nunca leve pra algum lugar de verdade. O ecchi também é na medida certa, sem chegar naquele ponto exagerado, e ainda consegue se encaixar na história. E o Kazuma é muito real, parece que realmente é uma “pessoa” que foi pra um isekai e não um “protagonista”, e isso é o que realmente faz KonoSuba ser tão legal de assistir.",
     genre: "3, 4, 5, 7, 11"
   },
   {
@@ -661,17 +661,17 @@ const animes = [
   },
   {
     nome: "Kämpfer",
-    nota: null,
+    nota: 6.0,
     imdb: 6.0,
     MyAnimeList: 6.4,
     dublado: false,
-    finalizado: false,
+    finalizado: true,
     emLancamento: false,
     dropado: false,
     brutal: false,
-    eps: "0/14",
+    eps: "14/14",
     img: "https://m.media-amazon.com/images/M/MV5BNTQzNGYzNTItNTIzNS00YjQzLTg1ZTctY2M0MDdkZDYwODU2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???",
+    desc: "Resumo: Desperdício. O anime tinha ideias boas e a comédia começou engraçada, mas, com o passar dos episódios, as piadas foram ficando cada vez mais repetitivas. O romance é simplesmente chato, e o protagonista é lerdo, burro e gado, o que torna difícil acompanhar sem passar raiva. Para completar, as lutas e a história, que deveriam ser os pilares do anime, acabam deixadas de lado e pouco exploradas. Os combates são simples demais, e a história praticamente não se desenvolve, o que é uma pena, porque ela ainda consegue deixar um pouco de curiosidade sobre o que poderia ter sido. Já o ecchi é aceitável: passa um pouco do ponto, mas não chega nem perto de ser extremo como em Maken-ki!.",
     genre: "1, 2, 3, 4, 15, 20"
   },
   {
