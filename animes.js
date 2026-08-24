@@ -706,17 +706,17 @@ const animes = [
   },
   {
     nome: "Tenpuru",
-    nota: null,
+    nota: 7.2,
     imdb: 6.3,
     MyAnimeList: 6.7,
     dublado: false,
-    finalizado: false,
+    finalizado: true,
     emLancamento: false,
     dropado: false,
     brutal: false,
-    eps: "0/13",
+    eps: "13/13",
     img: "https://m.media-amazon.com/images/M/MV5BMzhiODBjNWQtNzI1Ny00YmY4LTlmYjItMjk0M2Y3MTNiYjUzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???",
+    desc: "O começo é bem engraçado porque a ideia funciona, o cara se moendo na porrada pra se livrar dos pensamentos impuros, junto das situações absurdas, dos mal-entendidos e do ecchi extremamente exagerado (até demais), rende uma comédia muito boa. O problema é que isso não consegue se sustentar por muito tempo e começa a ficar extremamente repetitivo. Pra tentar fugir disso, o anime coloca uma trama que, no final, só deixa tudo ainda mais arrastado. A história é praticamente nula, tirando alguns momentos específicos, mas não chega a ser um anime ruim. Só acho que ele começa a se arrastar demais conforme avança. (Obs. não estou contando o OVA na nota, PQ ELE É CRIMINOSO!!!)",
     genre: "1, 3, 4, 15, 20"
   },
   {
