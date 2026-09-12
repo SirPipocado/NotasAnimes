@@ -886,7 +886,7 @@ const animes = [
     brutal: false,
     eps: "13/13",
     img: "https://m.media-amazon.com/images/M/MV5BMTc2MGM2M2EtZGIzNS00ODdhLWJhOWMtZGM1N2I3ZTQ3ZWNkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "Um anime MUITO divertido de assistir, engraçado o hype foco do protagonista em achar os bugs kk, facilmente assistiria mais temporadas, o único problema que realmente me encomendou foi a inconsistência em certas partes que quebra um pouco da imersão, pois ele cria algumas regras do mundo que logo depois são quebradas, mas de resto é um anime muito divertido de assistir.",
+    desc: "Um anime MUITO divertido de assistir, engraçado o hiperfoco do protagonista em achar os bugs kk, facilmente assistiria mais temporadas, o único problema que realmente me encomendou foi a inconsistência em certas partes que quebra um pouco da imersão, pois ele cria algumas regras do mundo que logo depois são quebradas, mas de resto é um anime muito divertido de assistir.",
     genre: "2, 5, 7, 11"
   },
   {
