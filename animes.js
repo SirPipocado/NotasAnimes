@@ -816,17 +816,17 @@ const animes = [
   },
   {
     nome: "Trigun",
-    nota: null,
+    nota: 8.0,
     imdb: 8.2,
     MyAnimeList: 8.2,
     dublado: true,
-    finalizado: false,
+    finalizado: true,
     emLancamento: false,
     dropado: false,
     brutal: false,
-    eps: "0/26",
+    eps: "26/26",
     img: "https://m.media-amazon.com/images/M/MV5BNjVjZDE0MzEtN2Q1Mi00YjgyLWE0NTMtMWJiNDA5MGRmMmM2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???",
+    desc: "Um clássico muito bom, o tom de comédia e a quebra de expectativa do começo é muito engraçada, ele tem um ar misterioso que prende quem assiste, ele tem um tom meio cômico mas se você realmente prestar atenção na história, é um anime BEM pesado, o único problema é que ele deixa algumas perguntas meio sem respostas, e ele acaba meio sem explicar nada direito, facilmente poderia ter um último episódio mostrando o pós que fecharia com chave de ouro, mas mesmo assim é um anime muito bom de assistir.",
     genre: "2, 8, 11"
   },
   {
@@ -876,17 +876,17 @@ const animes = [
   },
   {
     nome: "Quality Assurance in Another World",
-    nota: null,
+    nota: 7.6,
     imdb: 6.0,
     MyAnimeList: 6.5,
     dublado: true,
-    finalizado: false,
+    finalizado: true,
     emLancamento: false,
     dropado: false,
     brutal: false,
-    eps: "0/13",
+    eps: "13/13",
     img: "https://m.media-amazon.com/images/M/MV5BMTc2MGM2M2EtZGIzNS00ODdhLWJhOWMtZGM1N2I3ZTQ3ZWNkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-    desc: "???",
+    desc: "Um anime MUITO divertido de assistir, engraçado o hype foco do protagonista em achar os bugs kk, facilmente assistiria mais temporadas, o único problema que realmente me encomendou foi a inconsistência em certas partes que quebra um pouco da imersão, pois ele cria algumas regras do mundo que logo depois são quebradas, mas de resto é um anime muito divertido de assistir.",
     genre: "2, 5, 7, 11"
   },
   {
