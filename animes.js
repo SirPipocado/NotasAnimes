@@ -736,17 +736,17 @@ const animes = [
   },
   {
     nome: "BOFURI: I Don't Want to Get Hurt, so I'll Max Out My Defense.",
-    nota: null,
+    nota: 7.3,
     imdb: 7.3,
     MyAnimeList: 7.5,
     dublado: false,
-    finalizado: false,
+    finalizado: true,
     emLancamento: false,
     dropado: false,
     brutal: false,
-    eps: "0/24",
+    eps: "24/24",
     img: "https://m.media-amazon.com/images/M/MV5BYzNlMWNkN2MtNmJjZi00YjcxLTgwMjEtNjhlODc1Yjg2NGM4XkEyXkFqcGc@._V1_.jpg",
-    desc: "???",
+    desc: "Eu vou dar minha opinião sincera sobre o anime, eu sinto que ele tem mais pontos negativos no geral. Ele é engraçado, os absurdos e exageros são legais de assistir, mas o anime é a cura da ansiedade na sua forma pura, você assiste sabendo que no final não vai acontecer nada demais, que a Maple só vai fazer alguma coisa louca e resolver tudo, e isso deixa o anime MUITO previsível. O começo da segunda temporada também chega a cansar de TÃO REPETITIVO, e a progressão parece quase inexistente. Claro que tem progressão, eles passam de andar, de evento, mas nada parece que realmente vai mudar alguma coisa. E ainda dão tantas habilidades pra Maple que no final ela nem usa várias delas, fica só uma piada e acabou. No geral foi legal de assistir, tirando o começo da segunda temporada, mas o final dela foi bem legal, porem é um anime que às vezes fica difícil de assistir até com o cérebro desligado.",
     genre: "2, 4, 7, 11"
   },
   {
