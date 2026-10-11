@@ -341,7 +341,7 @@ const animes = [
   },
   {
     nome: "Neon Genesis Evangelion",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 5.0,
     imdb: 8.5,
@@ -513,7 +513,7 @@ const animes = [
   },
   {
     nome: "komi can't communicate",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 8.5,
     imdb: 7.6,
@@ -813,7 +813,7 @@ const animes = [
   },
   {
     nome: "Dungeon Meshi",
-    classificacao: "?",
+    classificacao: "16",
     classificacaoEstimada: false,
     nota: null,
     imdb: 8.1,
@@ -903,7 +903,7 @@ const animes = [
   },
   {
     nome: "Back Street Girls: Gokudols",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 7.0,
     imdb: 6.6,
@@ -1039,7 +1039,7 @@ const animes = [
   },
   {
     nome: "The Fragrant Flower Blooms with Dignity",
-    classificacao: "?",
+    classificacao: "12",
     classificacaoEstimada: false,
     nota: 8.5,
     imdb: 8.3,
