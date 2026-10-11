@@ -393,7 +393,7 @@ const animes = [
   },
   {
     nome: "ONIMAI: I'm Now Your Sister!",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: null,
     imdb: 6.7,
@@ -462,7 +462,7 @@ const animes = [
   },
   {
     nome: "My Love Story with Yamada-kun at Lv999",
-    classificacao: "?",
+    classificacao: "12",
     classificacaoEstimada: false,
     nota: 5.5,
     imdb: 7.6,
