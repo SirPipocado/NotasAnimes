@@ -1,6 +1,8 @@
 const animes = [
   {
     nome: "My Dress-Up Darling",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 8.0,
     imdb: 7.9,
     MyAnimeList: 8.1,
@@ -16,6 +18,8 @@ const animes = [
   },
   {
     nome: "Demon Slayer",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 8.8,
     imdb: 8.5,
     MyAnimeList: 8.4,
@@ -31,6 +35,8 @@ const animes = [
   },
   {
     nome: "Dandadan",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 8.5,
     imdb: 8.3,
     MyAnimeList: 8.4,
@@ -46,6 +52,8 @@ const animes = [
   },
   {
     nome: "Frieren: Beyond Journey's End",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 9.3,
     imdb: 8.9,
     MyAnimeList: 9.3,
@@ -61,6 +69,8 @@ const animes = [
   },
   {
     nome: "Fullmetal Alchemist: Brotherhood",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: 9.5,
     imdb: 9.1,
     MyAnimeList: 9.1,
@@ -76,6 +86,8 @@ const animes = [
   },
   {
     nome: "Fire Force",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 7.5,
     imdb: 7.6,
     MyAnimeList: 7.7,
@@ -91,6 +103,8 @@ const animes = [
   },
   {
     nome: "Assassination Classroom",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: 7.5,
     imdb: 7.9,
     MyAnimeList: 8.1,
@@ -106,6 +120,8 @@ const animes = [
   },
   {
     nome: "The Greatest Demon Lord Is Reborn as a Typical Nobody",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: 7.5,
     imdb: 6.2,
     MyAnimeList: 6.3,
@@ -121,6 +137,8 @@ const animes = [
   },
   {
     nome: "Miss Kobayashi's Dragon Maid",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 6.0,
     imdb: 7.7,
     MyAnimeList: 7.9,
@@ -136,6 +154,8 @@ const animes = [
   },
   {
     nome: "A.I.C.O. Incarnation",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: 7.0,
     imdb: 6.3,
     MyAnimeList: 6.5,
@@ -151,6 +171,8 @@ const animes = [
   },
   {
     nome: "Horimiya",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 4.0,
     imdb: 8.0,
     MyAnimeList: 8.2,
@@ -166,6 +188,8 @@ const animes = [
   },
   {
     nome: "The Weakest Tamer Began a Journey to Pick Up Trash",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 8.0,
     imdb: 7.3,
     MyAnimeList: 7.6,
@@ -181,6 +205,8 @@ const animes = [
   },
   {
     nome: "KonoSuba: God's Blessing on This Wonderful World!",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: 9.5,
     imdb: 7.8,
     MyAnimeList: 8.1,
@@ -196,6 +222,8 @@ const animes = [
   },
   {
     nome: "My Unique Skill Makes Me OP Even at Level 1",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 7.5,
     imdb: 6.3,
     MyAnimeList: 6.2,
@@ -211,6 +239,8 @@ const animes = [
   },
   {
     nome: "I Got a Cheat Skill in Another World and Became Unrivaled in The Real World, Too",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: 7.5,
     imdb: 6.6,
     MyAnimeList: 6.3,
@@ -226,6 +256,8 @@ const animes = [
   },
   {
     nome: "That Time I Got Reincarnated as a Slime",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 9.0,
     imdb: 8.0,
     MyAnimeList: 8.1,
@@ -241,6 +273,8 @@ const animes = [
   },
   {
     nome: "The Unwanted Undead Adventurer",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: 7.5,
     imdb: 7.3,
     MyAnimeList: 7.4,
@@ -256,6 +290,8 @@ const animes = [
   },
   {
     nome: "Kaguya-sama: Love Is War",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 7.7,
     imdb: 8.5,
     MyAnimeList: 8.4,
@@ -271,6 +307,8 @@ const animes = [
   },
   {
     nome: "Tomo-chan Is a Girl!",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 7.0,
     imdb: 7.5,
     MyAnimeList: 7.7,
@@ -286,6 +324,8 @@ const animes = [
   },
   {
     nome: "Sword Art Online",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: 8.5,
     imdb: 7.5,
     MyAnimeList: 7.2,
@@ -301,6 +341,8 @@ const animes = [
   },
   {
     nome: "Neon Genesis Evangelion",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 5.0,
     imdb: 8.5,
     MyAnimeList: 8.4,
@@ -316,6 +358,8 @@ const animes = [
   },
   {
     nome: "Dr. Stone",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 8.0,
     imdb: 8.1,
     MyAnimeList: 8.3,
@@ -331,6 +375,8 @@ const animes = [
   },
   {
     nome: "The Apothecary Diaries",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: null,
     imdb: 8.6,
     MyAnimeList: 8.8,
@@ -347,6 +393,8 @@ const animes = [
   },
   {
     nome: "ONIMAI: I'm Now Your Sister!",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: null,
     imdb: 6.7,
     MyAnimeList: 7.6,
@@ -362,6 +410,8 @@ const animes = [
   },
   {
     nome: "KonoSuba: An Explosion on This Wonderful World!",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nomeOriginal: "KonoSuba: An Explosion on This Wonderful World!",
     nota: 9.0,
     imdb: 7.0,
@@ -378,6 +428,8 @@ const animes = [
   },
   {
     nome: "Akashic Records of Bastard Magic Instructor",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: 8.2,
     imdb: 7.0,
     MyAnimeList: 7.1,
@@ -393,6 +445,8 @@ const animes = [
   },
   {
     nome: "Hell's Paradise",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 7.8,
     imdb: 8.1,
     MyAnimeList: 8.1,
@@ -408,6 +462,8 @@ const animes = [
   },
   {
     nome: "My Love Story with Yamada-kun at Lv999",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 5.5,
     imdb: 7.6,
     MyAnimeList: 7.7,
@@ -423,6 +479,8 @@ const animes = [
   },
   {
     nome: "A Gatherer's Adventure in Isekai",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 6.5,
     imdb: 6.2,
     MyAnimeList: 6.1,
@@ -438,6 +496,8 @@ const animes = [
   },
   {
     nome: "Jujutsu Kaisen",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 8.0,
     imdb: 8.5,
     MyAnimeList: 8.5,
@@ -453,6 +513,8 @@ const animes = [
   },
   {
     nome: "komi can't communicate",
+    classificacao: "L",
+    classificacaoEstimada: true,
     nota: 8.5,
     imdb: 7.6,
     MyAnimeList: 7.8,
@@ -468,6 +530,8 @@ const animes = [
   },
   {
     nome: "Blend S",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 8.0,
     imdb: 6.8,
     MyAnimeList: 7.2,
@@ -483,6 +547,8 @@ const animes = [
   },
   {
     nome: "Yu Yu Hakusho",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 8.7,
     imdb: 8.5,
     MyAnimeList: 8.5,
@@ -498,6 +564,8 @@ const animes = [
   },
   {
     nome: "Beast Tamer",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 7.5,
     imdb: 6.9,
     MyAnimeList: 6.9,
@@ -513,6 +581,8 @@ const animes = [
   },
   {
     nome: "Date A Live",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 7.8,
     imdb: 6.9,
     MyAnimeList: 7.1,
@@ -541,6 +611,8 @@ const animes = [
   },
   {
     nome: "Fate/strange Fake",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: null,
     imdb: 8.1,
     MyAnimeList: 8.3,
@@ -557,6 +629,8 @@ const animes = [
   },
   {
     nome: "The Unaware Atelier Meister",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 7.7,
     imdb: 6.5,
     MyAnimeList: 6.4,
@@ -572,6 +646,8 @@ const animes = [
   },
   {
     nome: "Chainsaw Man",
+    classificacao: "18",
+    classificacaoEstimada: true,
     nota: null,
     imdb: 8.3,
     MyAnimeList: 8.4,
@@ -587,6 +663,8 @@ const animes = [
   },
   {
     nome: "Life with an Ordinary Guy Who Reincarnated into a Total Fantasy Knockout",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: 5.5,
     imdb: 6.6,
     MyAnimeList: 7.1,
@@ -602,6 +680,8 @@ const animes = [
   },
   {
     nome: "Love, Chunibyo & Other Delusions!",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 9.0,
     imdb: 7.4,
     MyAnimeList: 7.7,
@@ -626,6 +706,8 @@ const animes = [
   },
   {
     nome: "ID: INVADED",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 7.9,
     imdb: 7.5,
     MyAnimeList: 7.8,
@@ -641,6 +723,8 @@ const animes = [
   },
   {
     nome: "Maken-ki!",
+    classificacao: "18",
+    classificacaoEstimada: true,
     nota: 5.0,
     imdb: 5.9,
     MyAnimeList: 6.3,
@@ -661,6 +745,8 @@ const animes = [
   },
   {
     nome: "Kämpfer",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 6.0,
     imdb: 6.0,
     MyAnimeList: 6.4,
@@ -676,6 +762,8 @@ const animes = [
   },
   {
     nome: "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 8.5,
     imdb: 7.0,
     MyAnimeList: 7.7,
@@ -691,6 +779,8 @@ const animes = [
   },
   {
     nome: "Trapped in a Dating Sim: The World of Otome Games Is Tough for Mobs",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: null,
     imdb: 7.3,
     MyAnimeList: 7.3,
@@ -706,6 +796,8 @@ const animes = [
   },
   {
     nome: "Tenpuru",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 7.2,
     imdb: 6.3,
     MyAnimeList: 6.7,
@@ -721,6 +813,8 @@ const animes = [
   },
   {
     nome: "Dungeon Meshi",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: null,
     imdb: 8.1,
     MyAnimeList: 8.6,
@@ -736,6 +830,8 @@ const animes = [
   },
   {
     nome: "BOFURI: I Don't Want to Get Hurt, so I'll Max Out My Defense.",
+    classificacao: "10",
+    classificacaoEstimada: true,
     nota: 7.3,
     imdb: 7.3,
     MyAnimeList: 7.5,
@@ -751,6 +847,8 @@ const animes = [
   },
   {
     nome: "Uzaki-chan wa Asobitai!",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: 7.1,
     imdb: 6.8,
     MyAnimeList: 7.0,
@@ -771,6 +869,8 @@ const animes = [
   },
   {
     nome: "Maoyu",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: null,
     imdb: 6.7,
     MyAnimeList: 7.2,
@@ -786,6 +886,8 @@ const animes = [
   },
   {
     nome: "A Journey Through Another World: Raising Kids While Adventuring",
+    classificacao: "L",
+    classificacaoEstimada: true,
     nota: 7.7,
     imdb: 6.3,
     MyAnimeList: 6.7,
@@ -801,6 +903,8 @@ const animes = [
   },
   {
     nome: "Back Street Girls: Gokudols",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 7.0,
     imdb: 6.6,
     MyAnimeList: 7.0,
@@ -816,6 +920,8 @@ const animes = [
   },
   {
     nome: "Trigun",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 8.0,
     imdb: 8.2,
     MyAnimeList: 8.2,
@@ -831,6 +937,8 @@ const animes = [
   },
   {
     nome: "The Fruit of Grisaia",
+    classificacao: "18",
+    classificacaoEstimada: true,
     nota: null,
     imdb: 6.9,
     MyAnimeList: 7.5,
@@ -846,6 +954,8 @@ const animes = [
   },
   {
     nome: "Murenase! Seton Gakuen",
+    classificacao: "14",
+    classificacaoEstimada: true,
     nota: null,
     imdb: 6.5,
     MyAnimeList: 6.9,
@@ -861,6 +971,8 @@ const animes = [
   },
   {
     nome: "Farming Life in Another World",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: null,
     imdb: 7.3,
     MyAnimeList: 7.5,
@@ -876,6 +988,8 @@ const animes = [
   },
   {
     nome: "Quality Assurance in Another World",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 7.6,
     imdb: 6.0,
     MyAnimeList: 6.5,
@@ -891,6 +1005,8 @@ const animes = [
   },
   {
     nome: "Uma Musume: Pretty Derby",
+    classificacao: "L",
+    classificacaoEstimada: true,
     nota: null,
     imdb: 7.3,
     MyAnimeList: 7.4,
@@ -906,6 +1022,8 @@ const animes = [
   },
   {
     nome: "The Case Study of Vanitas",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 7.4,
     imdb: 7.6,
     MyAnimeList: 7.9,
@@ -921,6 +1039,8 @@ const animes = [
   },
   {
     nome: "The Fragrant Flower Blooms with Dignity",
+    classificacao: "12",
+    classificacaoEstimada: true,
     nota: 8.5,
     imdb: 8.3,
     MyAnimeList: 8.5,
@@ -936,6 +1056,8 @@ const animes = [
   },
   {
     nome: "Combatants Will Be Dispatched!",
+    classificacao: "16",
+    classificacaoEstimada: true,
     nota: 7.7,
     imdb: 6.6,
     MyAnimeList: 7.1,
@@ -951,6 +1073,8 @@ const animes = [
   },
     {
     nome: "Mushoku Tensei",
+    classificacao: "18",
+    classificacaoEstimada: true,
     nota: null,
     imdb: 8.2,
     MyAnimeList: 8.3,
