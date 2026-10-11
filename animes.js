@@ -479,7 +479,7 @@ const animes = [
   },
   {
     nome: "A Gatherer's Adventure in Isekai",
-    classificacao: "?",
+    classificacao: "12",
     classificacaoEstimada: false,
     nota: 6.5,
     imdb: 6.2,
@@ -663,7 +663,7 @@ const animes = [
   },
   {
     nome: "Life with an Ordinary Guy Who Reincarnated into a Total Fantasy Knockout",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 5.5,
     imdb: 6.6,
