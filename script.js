@@ -76,7 +76,7 @@ function renderizar(lista) {
 
       <div class="banner-container">
         <img class="banner" src="${anime.img}">
-        <span class="classificacao-selo" data-classificacao="${["L", "10", "12", "14", "16", "18"].includes(String(anime.classificacao ?? "").toUpperCase()) ? String(anime.classificacao).toUpperCase() : "?"}" title="Classificação indicativa: ${anime.classificacao ?? "Não informada"}">
+        <span class="classificacao-selo" data-classificacao="${["L", "10", "12", "14", "16", "18"].includes(String(anime.classificacao ?? "").toUpperCase()) ? String(anime.classificacao).toUpperCase() : "?"}" title="Classificação indicativa: ${anime.classificacao ?? "Não informada"}${anime.classificacaoEstimada ? " (estimativa, não oficial)" : ""}">
           ${["L", "10", "12", "14", "16", "18"].includes(String(anime.classificacao ?? "").toUpperCase()) ? String(anime.classificacao).toUpperCase() : "?"}
         </span>
       </div>
