@@ -62,6 +62,37 @@ button:hover { background: #2563eb; }
   z-index: 5;
 }
 
+/* Classificação indicativa sobre o canto inferior direito da capa */
+.banner-container {
+  position: relative;
+  width: 100%;
+}
+.banner-container .banner {
+  display: block;
+}
+.classificacao-selo {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  background: #64748b;
+  color: #fff;
+  font: 700 12px Arial, sans-serif;
+  line-height: 1;
+  pointer-events: none;
+}
+.classificacao-selo[data-classificacao="L"] { background: #169b45; }
+.classificacao-selo[data-classificacao="10"] { background: #1887c9; }
+.classificacao-selo[data-classificacao="12"] { background: #e1c125; color: #111; }
+.classificacao-selo[data-classificacao="14"] { background: #e88928; }
+.classificacao-selo[data-classificacao="16"] { background: #d62c35; }
+.classificacao-selo[data-classificacao="18"] { background: #171717; }
+
 .banner {
   width: 100%;
   aspect-ratio: 2 / 3;
