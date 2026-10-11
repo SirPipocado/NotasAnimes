@@ -137,7 +137,7 @@ const animes = [
   },
   {
     nome: "Miss Kobayashi's Dragon Maid",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 6.0,
     imdb: 7.7,
@@ -830,7 +830,7 @@ const animes = [
   },
   {
     nome: "BOFURI: I Don't Want to Get Hurt, so I'll Max Out My Defense.",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 7.3,
     imdb: 7.3,
