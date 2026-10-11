@@ -706,7 +706,7 @@ const animes = [
   },
   {
     nome: "ID: INVADED",
-    classificacao: "?",
+    classificacao: "16",
     classificacaoEstimada: false,
     nota: 7.9,
     imdb: 7.5,
