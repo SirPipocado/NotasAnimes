@@ -1022,7 +1022,7 @@ const animes = [
   },
   {
     nome: "The Case Study of Vanitas",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 7.4,
     imdb: 7.6,
