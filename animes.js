@@ -239,7 +239,7 @@ const animes = [
   },
   {
     nome: "I Got a Cheat Skill in Another World and Became Unrivaled in The Real World, Too",
-    classificacao: "?",
+    classificacao: "12",
     classificacaoEstimada: false,
     nota: 7.5,
     imdb: 6.6,
@@ -358,7 +358,7 @@ const animes = [
   },
   {
     nome: "Dr. Stone",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 8.0,
     imdb: 8.1,
@@ -680,7 +680,7 @@ const animes = [
   },
   {
     nome: "Love, Chunibyo & Other Delusions!",
-    classificacao: "?",
+    classificacao: "12",
     classificacaoEstimada: false,
     nota: 9.0,
     imdb: 7.4,
@@ -745,7 +745,7 @@ const animes = [
   },
   {
     nome: "Kämpfer",
-    classificacao: "?",
+    classificacao: "16",
     classificacaoEstimada: false,
     nota: 6.0,
     imdb: 6.0,
@@ -869,7 +869,7 @@ const animes = [
   },
   {
     nome: "Maoyu",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: null,
     imdb: 6.7,
@@ -920,7 +920,7 @@ const animes = [
   },
   {
     nome: "Trigun",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 8.0,
     imdb: 8.2,
@@ -937,7 +937,7 @@ const animes = [
   },
   {
     nome: "The Fruit of Grisaia",
-    classificacao: "?",
+    classificacao: "16",
     classificacaoEstimada: false,
     nota: null,
     imdb: 6.9,
@@ -954,7 +954,7 @@ const animes = [
   },
   {
     nome: "Murenase! Seton Gakuen",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: null,
     imdb: 6.5,
@@ -971,7 +971,7 @@ const animes = [
   },
   {
     nome: "Farming Life in Another World",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: null,
     imdb: 7.3,
@@ -1005,7 +1005,7 @@ const animes = [
   },
   {
     nome: "Uma Musume: Pretty Derby",
-    classificacao: "?",
+    classificacao: "12",
     classificacaoEstimada: false,
     nota: null,
     imdb: 7.3,
