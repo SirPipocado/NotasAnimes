@@ -18,7 +18,7 @@ const animes = [
   },
   {
     nome: "Demon Slayer",
-    classificacao: "?",
+    classificacao: "16",
     classificacaoEstimada: false,
     nota: 8.8,
     imdb: 8.5,
@@ -564,7 +564,7 @@ const animes = [
   },
   {
     nome: "Beast Tamer",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 7.5,
     imdb: 6.9,
@@ -779,7 +779,7 @@ const animes = [
   },
   {
     nome: "Trapped in a Dating Sim: The World of Otome Games Is Tough for Mobs",
-    classificacao: "?",
+    classificacao: "16",
     classificacaoEstimada: false,
     nota: null,
     imdb: 7.3,
