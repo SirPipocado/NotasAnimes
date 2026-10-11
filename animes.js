@@ -171,7 +171,7 @@ const animes = [
   },
   {
     nome: "Horimiya",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 4.0,
     imdb: 8.0,
@@ -375,7 +375,7 @@ const animes = [
   },
   {
     nome: "The Apothecary Diaries",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: null,
     imdb: 8.6,
@@ -1056,7 +1056,7 @@ const animes = [
   },
   {
     nome: "Combatants Will Be Dispatched!",
-    classificacao: "?",
+    classificacao: "16",
     classificacaoEstimada: false,
     nota: 7.7,
     imdb: 6.6,
@@ -1073,7 +1073,7 @@ const animes = [
   },
     {
     nome: "Mushoku Tensei",
-    classificacao: "?",
+    classificacao: "16",
     classificacaoEstimada: false,
     nota: null,
     imdb: 8.2,
