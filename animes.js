@@ -324,7 +324,7 @@ const animes = [
   },
   {
     nome: "Sword Art Online",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 8.5,
     imdb: 7.5,
@@ -762,7 +762,7 @@ const animes = [
   },
   {
     nome: "The 100 Girlfriends Who Really, Really, Really, Really, REALLY Love You",
-    classificacao: "?",
+    classificacao: "16",
     classificacaoEstimada: false,
     nota: 8.5,
     imdb: 7.0,
