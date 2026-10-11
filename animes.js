@@ -723,7 +723,7 @@ const animes = [
   },
   {
     nome: "Maken-ki!",
-    classificacao: "?",
+    classificacao: "18",
     classificacaoEstimada: false,
     nota: 5.0,
     imdb: 5.9,
