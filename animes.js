@@ -205,8 +205,8 @@ const animes = [
   },
   {
     nome: "KonoSuba: God's Blessing on This Wonderful World!",
-    classificacao: "14",
-    classificacaoEstimada: true,
+    classificacao: "16",
+    classificacaoEstimada: false,
     nota: 9.5,
     imdb: 7.8,
     MyAnimeList: 8.1,
