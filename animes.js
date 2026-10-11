@@ -154,7 +154,7 @@ const animes = [
   },
   {
     nome: "A.I.C.O. Incarnation",
-    classificacao: "?",
+    classificacao: "12",
     classificacaoEstimada: false,
     nota: 7.0,
     imdb: 6.3,
