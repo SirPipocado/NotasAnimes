@@ -547,7 +547,7 @@ const animes = [
   },
   {
     nome: "Yu Yu Hakusho",
-    classificacao: "?",
+    classificacao: "14",
     classificacaoEstimada: false,
     nota: 8.7,
     imdb: 8.5,
