@@ -796,7 +796,7 @@ const animes = [
   },
   {
     nome: "Tenpuru",
-    classificacao: "?",
+    classificacao: "16",
     classificacaoEstimada: false,
     nota: 7.2,
     imdb: 6.3,
