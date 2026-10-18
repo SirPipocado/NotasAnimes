@@ -525,7 +525,7 @@ const animes = [
     brutal: false,
     eps: "24/24", 
     img: "https://m.media-amazon.com/images/M/MV5BZGMzZDY0MDUtYzY5OS00NmI0LTlhZmUtZGM2NjVjNjdiNThlXkEyXkFqcGc@._V1_.jpg",
-    desc: "Anime MUITO bom, a ideia é boa, a comédia é boa, o romance é no ponto certo, sem acelerar nem focar totalmente, o que é perfeito, e eu não fiquei enjoado vendo, o que é difícil para um Slice of life para mim. (obs. a comi é muito fofa)",
+    desc: "Anime MUITO bom, a ideia é boa, a comédia é boa, o romance é no ponto certo, sem acelerar nem focar totalmente, o que é perfeito, e eu não fiquei enjoado vendo, o que é difícil para um Slice of life para mim. (obs. a Komi é muito fofa)",
     genre: "1, 4, 9, 20"
   },
   {
