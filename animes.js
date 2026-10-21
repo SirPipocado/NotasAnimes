@@ -773,7 +773,7 @@ const animes = [
     dropado: false,
     brutal: false,
     eps: "24/36",
-    img: "https://m.media-amazon.com/images/M/MV5BMTc5MTE3MTktN2MwYy00M2UwLTlhMzEtNDE5YjBmMTUzMGRkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    img: "./images/100-girlfriends.jpg",
     desc: "Que anime incrível!!! É bizarro como ele consegue misturar uma comédia boa com drama e romance. As quebras da quarta parede são bizarramente engraçadas, e é loucura como o anime consegue dar atenção para TODAS as personagens, mesmo sendo tantas. Muito bom, recomendo muito!!!(Obs.: Tem muito ecchi, até demais.)",
     genre: "1, 3, 4, 15, 20"
   },
