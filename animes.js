@@ -781,7 +781,7 @@ const animes = [
     nome: "Trapped in a Dating Sim: The World of Otome Games Is Tough for Mobs",
     classificacao: "16",
     classificacaoEstimada: false,
-    nota: 7.3,
+    nota: 7.6,
     imdb: 7.3,
     MyAnimeList: 7.3,
     dublado: true,
