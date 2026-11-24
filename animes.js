@@ -950,7 +950,16 @@ const animes = [
     eps: "0/24",
     img: "https://m.media-amazon.com/images/M/MV5BYmI2ODI1OTAtMzU4YS00NDUyLWI2MGEtNzQ1NmIxZTk1NDhmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     desc: "???",
-    genre: "1, 3, 6, 14"
+    genre: "1, 3, 6, 14",
+
+    temporadas: [
+      { nome: "1ª Temporada", nota: 7.5 },
+      { nome: "2ª Temporada", nota: 0.0 }
+    ],
+
+    filmesNotas: [
+      { nome: "The Labyrinth of Grisaia (ESPECIAL)", nota: 0.0 }
+    ]
   },
   {
     nome: "Murenase! Seton Gakuen",
